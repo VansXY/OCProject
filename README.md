@@ -1,7 +1,8 @@
 # OCProject
 
 1. 添加工程管理类文件
-/Users/hxb/Desktop/xiaoyang/XYGithub/OCProject/READMEIMG/0915968C-BEF5-48E9-B9B2-8D262E2D8B1B.png
+
+![image](https://github.com/VansXY/OCProject/blob/master/READMEIMG/0915968C-BEF5-48E9-B9B2-8D262E2D8B1B.png)
 
 2. 添加GCDAsyncSocketManager的使用
 
