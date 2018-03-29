@@ -75,3 +75,320 @@ return _config;
 4. KVO 自定义TabBar
 
 5. Category的积累
+
+```
+/// 获取设备版本号
++ (NSString *)getDeviceName;
+
+/// 获取iPhone名称
++ (NSString *)getiPhoneName;
+
+/// 获取app版本号
++ (NSString *)getAPPVerion;
+
+/// 获取电池电量
++ (CGFloat)getBatteryLevel;
+
+/// 当前系统名称
++ (NSString *)getSystemName;
+
+/// 当前系统版本号
++ (NSString *)getSystemVersion;
+
+/// 通用唯一识别码UUID
++ (NSString *)getUUID;
+
+/// 获取当前设备IP
++ (NSString *)getDeviceIPAdress;
+
+/// 获取总内存大小
++ (long long)getTotalMemorySize;
+
+/// 获取当前可用内存
++ (long long)getAvailableMemorySize;
+
+/// 获取精准电池电量
++ (CGFloat)getCurrentBatteryLevel;
+
+/// 获取电池当前的状态，共有4种状态
++ (NSString *) getBatteryState;
+
+/// 获取当前语言
++ (NSString *)getDeviceLanguage;
+
+/// APP中文名
++ (NSString *)appName;
+
+/// 获取启动页图片
++ (UIImage *)launchImage;
+
+/// 获取APP LOGO
++ (UIImage *)iconImage;
+
+/// 获取缓存大小 单位为Mb
++ (CGFloat)caculateAppCacheSize;
+
+/// 清除缓存
++ (void)clearAppCache:(void(^)(BOOL success))block;
+
+/**
+*  生成缓存目录全路径
+*/
+- (instancetype)cacheDirectories;
+
+/**
+*  生成文档目录全路径
+*/
+- (instancetype)docDirectories;
+
+/**
+*  生成临时目录全路径
+*/
+- (instancetype)tmpDirectories;
+
+/**
+*  判断字符串是否为空
+*
+*  @return YES 是 NO 不是
+*/
+- (BOOL)isEmpty;
+
+/**
+*  判断是否为整型
+*
+*  @return YES 是 NO 不是
+*/
+- (BOOL)isInteger;
+
+/**
+*  判断是否为浮点型
+*
+*  @return YES 是 NO 不是
+*/
+- (BOOL)isFloat;
+
+/**
+*  判断是否有特殊字符
+*
+*  @return YES 是 NO 不是
+*/
+- (BOOL)isHasSpecialcharacters;
+
+/**
+*  判断是否含有数字
+*
+*  @return YES 是 NO 不是
+*/
+- (BOOL)isHasNumder;
+
+// base64
+/**
+*  base64加密
+*
+*  @return 加密后的字符串
+*/
+- (NSString *)base64Encode;
+
+/**
+*  base64解密
+*
+*  @return 解密后的字符串
+*/
+- (NSString *)base64Decode;
+
+// des
+/**
+*  DES加密
+*
+*  @param key 加密需要的key
+*
+*  @return 得到加密后的字符串
+*/
+- (NSString *)encryptWithKey:(NSString *)key;
+
+/**
+*  DES解密
+*
+*  @param key 解密需要的key
+*
+*  @return 得到解密后的字符串
+*/
+- (NSString *)decryptWithKey:(NSString *)key;
+
+/**
+金额判断
+
+@param money 金额数
+@return YES OR NO
+*/
++ (BOOL)validateMoney:(NSString *)money;
+
+/**
+*  匹配Email
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isEmail;
+
+/**
+*  匹配URL
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isUrl;
+
+/**
+*  匹配电话号码
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isTelephone;
+
+- (BOOL)isHKTelephone;
+- (BOOL)isTaiWanTelephone;
+- (BOOL)isMCTelephone;
+- (BOOL)isChinaTelephone;
+
+- (BOOL)isTelephoneVerificationID;
+
+/**
+*  匹配身份证号码
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isChineseIdentificationCard;
+
+/**
+*  由英文、字母或数字组成 6-18位
+*
+*  @return YES 验证成功 NO 验证失败
+*/
+- (BOOL)isPassword;
+- (BOOL)isSpecailChar;
+
+/**
+*  匹配数字
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isNumbers;
+
+/**
+*  匹配英文字母
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isLetter;
+
+/**
+*  匹配大写英文字母
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isCapitalLetter;
+
+/**
+*  匹配小写英文字母
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isSmallLetter;
+
+/**
+*  匹配小写英文字母
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isLetterAndNumbers;
+
+/**
+*  匹配中文，英文字母和数字及_
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isChineseAndLetterAndNumberAndBelowLine;
+
+/**
+*  匹配中文，英文字母和数字及_ 并限制字数
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isChineseAndLetterAndNumberAndBelowLine4to10;
+
+/**
+*  匹配含有汉字、数字、字母、下划线不能以下划线开头和结尾
+*
+*  @return YES 成功 NO 失败
+*/
+- (BOOL)isChineseAndLetterAndNumberAndBelowLineNotFirstOrLast;
+
+#pragma mark - 计算String的字数(中英混合)
+///=============================================================================
+/// @name 计算String的字数(中英混合)
+///=============================================================================
+
+/**
+*  计算string字数
+*
+*  @return 获得的中英混合字数
+*/
+- (NSInteger)stringLength;
+
+
+#pragma mark -  email 转换为 774******@qq.com 形式
+///=============================================================================
+/// @name email 转换为 774******@qq.com 形式
+///=============================================================================
+
+/**
+*  email 转换为 774******@qq.com 形式
+*
+*  @return 替换后的字符串
+*/
+- (NSString *)emailChangeToPrivacy;
+
+#pragma mark - Emoji相关
+///=============================================================================
+/// @name Emoji相关
+///=============================================================================
+
+/**
+*  判断是否是Emoji
+*
+*  @return YES 是 NO 不是
+*/
+- (BOOL)isEmoji;
+
+/**
+*  判断字符串时候含有Emoji
+*
+*  @return YES 是 NO 不是
+*/
+- (BOOL)isIncludingEmoji;
+
+/**
+*  移除掉字符串中得Emoji
+*
+*  @return 得到移除后的Emoji
+*/
+- (instancetype)removedEmojiString;
+
+#pragma mark - 拼音相关
+///=============================================================================
+/// @name 拼音相关
+///=============================================================================
+
+/**
+*  汉字转成拼音
+*
+*  @return 拼音字符串
+*/
+- (instancetype)hanzi2pinyin;
+
+/**
+*  初始化拼音
+*
+*  @return 拼音字符串
+*/
+- (instancetype)pinyinInitial;
+```
