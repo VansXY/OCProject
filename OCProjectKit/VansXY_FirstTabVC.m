@@ -14,6 +14,7 @@
 
 #define kDefaultChannel     @"dkf"
 #define kToken              @"f14c4e6f6c89335ca5909031d1a6efa9"
+
 @interface VansXY_FirstTabVC ()
 
 @property (nonatomic, strong) XYTabBarItemButton *button;
