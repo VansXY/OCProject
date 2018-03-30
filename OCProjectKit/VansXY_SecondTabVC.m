@@ -19,13 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUI];
+//    [self setUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setUI];
+}
 #pragma mark - UI
 
 - (void)setUI {
-    
+    NSLog(@"%@", XYKeyChain.token);
 }
 
 

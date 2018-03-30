@@ -12,6 +12,7 @@
 #import "NSString+VansXY_Standard.h"
 #import "NSString+VansXY_Number.h"
 #import "NSAttributedString+Util.h"
+#import "XYKeyChainManager.h"
 
 
 #endif /* VansXY_Category_h */

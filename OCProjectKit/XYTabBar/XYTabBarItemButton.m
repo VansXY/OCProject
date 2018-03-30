@@ -33,6 +33,7 @@
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
+// 设计按钮的点击区域
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
     ///圆形区域半径
     CGFloat maxRadius = CGRectGetWidth(self.frame) / 2;

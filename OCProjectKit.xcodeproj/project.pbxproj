@@ -10,6 +10,7 @@
 		5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
+		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
 		E1451946206B6C480093F192 /* XYNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1451945206B6C480093F192 /* XYNetworkRequest.m */; };
 		E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1451948206B6CAF0093F192 /* XYBaseRequest.m */; };
 		E145194C206B9E280093F192 /* SGInfoAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E145194B206B9E270093F192 /* SGInfoAlert.m */; };
@@ -77,6 +78,8 @@
 		E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_ThirdTabVC.m; sourceTree = "<group>"; };
 		E12746C3206CDB360036B80E /* WZHDeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZHDeviceInformation.h; sourceTree = "<group>"; };
 		E12746C4206CDB370036B80E /* WZHDeviceInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZHDeviceInformation.m; sourceTree = "<group>"; };
+		E12746C7206CDF1B0036B80E /* XYKeyChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYKeyChainManager.h; sourceTree = "<group>"; };
+		E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYKeyChainManager.m; sourceTree = "<group>"; };
 		E1451944206B6C480093F192 /* XYNetworkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYNetworkRequest.h; sourceTree = "<group>"; };
 		E1451945206B6C480093F192 /* XYNetworkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYNetworkRequest.m; sourceTree = "<group>"; };
 		E1451947206B6CAF0093F192 /* XYBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBaseRequest.h; sourceTree = "<group>"; };
@@ -202,6 +205,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E12746C6206CDF020036B80E /* KeyChainManager */ = {
+			isa = PBXGroup;
+			children = (
+				E12746C7206CDF1B0036B80E /* XYKeyChainManager.h */,
+				E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */,
+			);
+			path = KeyChainManager;
+			sourceTree = "<group>";
+		};
 		E145194D206B9FAE0093F192 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +329,7 @@
 		E15DFAD61FEA737F00FBF3A8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E12746C6206CDF020036B80E /* KeyChainManager */,
 				E12746C3206CDB360036B80E /* WZHDeviceInformation.h */,
 				E12746C4206CDB370036B80E /* WZHDeviceInformation.m */,
 				E145194D206B9FAE0093F192 /* AlertView */,
@@ -701,6 +714,7 @@
 				E16D9C0E206A20A80077FEF3 /* XYSocketManege.m in Sources */,
 				E1E3BE3F2060BE6A00BEFD45 /* XYTabBarItemButton.m in Sources */,
 				E1451946206B6C480093F192 /* XYNetworkRequest.m in Sources */,
+				E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */,
 				E15DFAE01FEA737F00FBF3A8 /* NSAttributedString+Util.m in Sources */,
 				E1FA67E51FEBC71300D84338 /* VansXYTools.m in Sources */,
 				E145194C206B9E280093F192 /* SGInfoAlert.m in Sources */,

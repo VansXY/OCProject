@@ -28,5 +28,7 @@
 // 数据解析
 #import "YYModel.h"
 #import "YYWebImage.h"
+#import <UICKeyChainStore.h>
+
 
 #endif /* VansXY_SDKHeader_h */

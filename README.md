@@ -70,9 +70,67 @@ return _config;
 [[XYGCDAsyncSocketManage shareInstance] createSocketWithConfig:self.config];
 ```
 
-3. 添加 UICKeyChainStore 对 UIKeyChain 的使用
+3. 添加 UICKeyChainStore 对 UIKeyChain 的使用，使用类似于NSUserDefault，方便快捷。
 
-4. KVO 自定义TabBar
+```
+#import <Foundation/Foundation.h>
+#import <UICKeyChainStore.h>
+
+static NSString *const server = @"OCProject";
+
+#define XYKeyChain [XYKeyChainManager shareHandle]
+
+@interface XYKeyChainManager : NSObject
+
+@property (nonatomic, strong) UICKeyChainStore *keyChain;
+@property (nonatomic, strong) NSString *token;
+
++ (XYKeyChainManager *)shareHandle;
+
+@end
+
+_keychain = XYKeyChain.keyChain;
+_keychain[@"token"] = kToken;
+NSLog(@"%d", [_keychain setString:kToken forKey:@"token"]);
+```
+
+4. KVC 自定义TabBar
+
+```
+// 把 tabBarButton 取出来（把 tabBar 的 subViews 打印出来就明白了）
+NSMutableArray *tabBarButtonArray = [NSMutableArray array];
+for (UIView *view in self.subviews) {
+if ([view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+[tabBarButtonArray addObject:view];
+}
+}
+
+CGFloat barWidth = self.bounds.size.width;
+CGFloat barHeight = self.bounds.size.height;
+CGFloat centerBtnWidth = CGRectGetWidth(self.centerBtn.frame);
+CGFloat centerBtnHeight = CGRectGetHeight(self.centerBtn.frame);
+// 设置中间按钮的位置，居中，凸起一丢丢
+self.centerBtn.center = CGPointMake(barWidth / 2, barHeight - centerBtnHeight/2 - 5 - 34); // 34是为了适配iPhone X，自己用宏代替
+// 重新布局其他 tabBarItem
+// 平均分配其他 tabBarItem 的宽度
+CGFloat barItemWidth = (barWidth - centerBtnWidth) / tabBarButtonArray.count;
+// 逐个布局 tabBarItem，修改 UITabBarButton 的 frame
+[tabBarButtonArray enumerateObjectsUsingBlock:^(UIView *  _Nonnull view, NSUInteger idx, BOOL * _Nonnull stop) {
+
+CGRect frame = view.frame;
+if (idx >= tabBarButtonArray.count / 2) {
+// 重新设置 x 坐标，如果排在中间按钮的右边需要加上中间按钮的宽度
+frame.origin.x = idx * barItemWidth + centerBtnWidth;
+} else {
+frame.origin.x = idx * barItemWidth;
+}
+// 重新设置宽度
+frame.size.width = barItemWidth;
+view.frame = frame;
+}];
+// 把中间按钮带到视图最前面
+[self bringSubviewToFront:self.centerBtn];
+```
 
 5. Category的积累
 
@@ -392,3 +450,7 @@ return _config;
 */
 - (instancetype)pinyinInitial;
 ```
+
+6. 包含全国地区文件 area.plist
+
+

@@ -11,14 +11,20 @@
 #import "GCDAsyncSocket.h"
 #import "XYGCDAsyncSocketManage.h"
 #import "XYConnectConfig.h"
+#import "XYKeyChainManager.h"
+
 
 #define kDefaultChannel     @"dkf"
 #define kToken              @"f14c4e6f6c89335ca5909031d1a6efa9"
+
+
 
 @interface VansXY_FirstTabVC ()
 
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
+@property (nonatomic, strong) UICKeyChainStore *keychain;
+
 @end
 
 @implementation VansXY_FirstTabVC
@@ -77,6 +83,10 @@
 #pragma mark - Action
 - (void)clickMe {
     NSLog(@"点我");
+    _keychain = XYKeyChain.keyChain;
+    _keychain[@"token"] = kToken;
+    NSLog(@"%d", [_keychain setString:kToken forKey:@"token"]);
+    
     NSDictionary *requestParams =@{};
     [[XYGCDAsyncSocketManage shareInstance] socketWriteDataWithRequestBody:requestParams completion:^(NSError * _Nullable error, id  _Nullable data) {
         NSLog(@"error = %@,\ndata = %@", error, data);
@@ -88,6 +98,10 @@
     }];
 }
 
+- (void)keyChainUse {
+    _keychain = XYKeyChain.keyChain;
+    [_keychain setValue:kToken forKey:@"token"];
+}
 
 #pragma mark - Setter / Getter / Lazy
 - (XYConnectConfig *)config {
