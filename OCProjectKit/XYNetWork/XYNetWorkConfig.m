@@ -18,8 +18,7 @@
 @property (nonatomic, strong) NSString *systemVersion;
 //用户信息
 @property (nonatomic, strong) NSString *userAgent;
-//token
-@property (nonatomic, strong) NetWorkTokenManager *tokenManager;
+
 @end
 
 @implementation XYNetWorkConfig
@@ -76,7 +75,7 @@
 - (NSDictionary *)requestHeader {
     if (!_requestHeader) {
         _requestHeader = @{
-                           @"token": _tokenManager.token,
+                           @"token": @"", // 取出token，可以keychain存储
                            @"X-Hxb-User-Agent": self.userAgent,
                            @"IDFA": [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString],
                            @"X-Request-Id": [[[UIDevice currentDevice] identifierForVendor] UUIDString],

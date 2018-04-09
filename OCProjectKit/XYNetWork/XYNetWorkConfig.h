@@ -8,7 +8,6 @@
 
 
 #import <Foundation/Foundation.h>
-#import "NetWorkTokenManager.h"
 
 /// 网络配置类
 

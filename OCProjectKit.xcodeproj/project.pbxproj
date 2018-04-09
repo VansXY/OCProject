@@ -14,8 +14,6 @@
 		E1451946206B6C480093F192 /* XYNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1451945206B6C480093F192 /* XYNetworkRequest.m */; };
 		E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1451948206B6CAF0093F192 /* XYBaseRequest.m */; };
 		E145194C206B9E280093F192 /* SGInfoAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E145194B206B9E270093F192 /* SGInfoAlert.m */; };
-		E1451950206BA8780093F192 /* NYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E145194F206BA8780093F192 /* NYNetworkManager.m */; };
-		E1451953206BAA440093F192 /* HxbHUDProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = E1451952206BAA440093F192 /* HxbHUDProgress.m */; };
 		E1582329204E3B6300200937 /* NSString+WZHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1582327204E3B6300200937 /* NSString+WZHExtension.m */; };
 		E15DFA981FEA70F100FBF3A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15DFA971FEA70F100FBF3A8 /* AppDelegate.m */; };
 		E15DFA9B1FEA70F100FBF3A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15DFA9A1FEA70F100FBF3A8 /* ViewController.m */; };
@@ -37,7 +35,9 @@
 		E16D9C0F206A20A80077FEF3 /* SocketRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D9C08206A20A70077FEF3 /* SocketRequestModel.m */; };
 		E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D9C0A206A20A70077FEF3 /* XYConnectConfig.m */; };
 		E16D9C15206A31070077FEF3 /* XYNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D9C14206A31070077FEF3 /* XYNetWorkConfig.m */; };
-		E16D9C18206A3C8D0077FEF3 /* NetWorkTokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D9C17206A3C8D0077FEF3 /* NetWorkTokenManager.m */; };
+		E19FDC3F207B3BA400D50154 /* XYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC3E207B3BA400D50154 /* XYNetworkManager.m */; };
+		E19FDC42207B3D9C00D50154 /* XYBaseRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC41207B3D9C00D50154 /* XYBaseRequestManager.m */; };
+		E19FDC45207B411400D50154 /* XYHudAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC44207B411400D50154 /* XYHudAlert.m */; };
 		E1E3BE3D2060BE6A00BEFD45 /* XYRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE382060BE6900BEFD45 /* XYRootViewController.m */; };
 		E1E3BE3E2060BE6A00BEFD45 /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE3A2060BE6900BEFD45 /* XYTabBar.m */; };
 		E1E3BE3F2060BE6A00BEFD45 /* XYTabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE3C2060BE6900BEFD45 /* XYTabBarItemButton.m */; };
@@ -86,10 +86,6 @@
 		E1451948206B6CAF0093F192 /* XYBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBaseRequest.m; sourceTree = "<group>"; };
 		E145194A206B9E270093F192 /* SGInfoAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGInfoAlert.h; sourceTree = "<group>"; };
 		E145194B206B9E270093F192 /* SGInfoAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGInfoAlert.m; sourceTree = "<group>"; };
-		E145194E206BA8780093F192 /* NYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYNetworkManager.h; sourceTree = "<group>"; };
-		E145194F206BA8780093F192 /* NYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYNetworkManager.m; sourceTree = "<group>"; };
-		E1451951206BAA440093F192 /* HxbHUDProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HxbHUDProgress.h; sourceTree = "<group>"; };
-		E1451952206BAA440093F192 /* HxbHUDProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HxbHUDProgress.m; sourceTree = "<group>"; };
 		E1451954206CBF4A0093F192 /* HXBRequestHudDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXBRequestHudDelegate.h; sourceTree = "<group>"; };
 		E1582327204E3B6300200937 /* NSString+WZHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WZHExtension.m"; sourceTree = "<group>"; };
 		E1582328204E3B6300200937 /* NSString+WZHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WZHExtension.h"; sourceTree = "<group>"; };
@@ -141,8 +137,12 @@
 		E16D9C12206A280D0077FEF3 /* RequestUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestUrl.h; sourceTree = "<group>"; };
 		E16D9C13206A31070077FEF3 /* XYNetWorkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYNetWorkConfig.h; sourceTree = "<group>"; };
 		E16D9C14206A31070077FEF3 /* XYNetWorkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYNetWorkConfig.m; sourceTree = "<group>"; };
-		E16D9C16206A3C8D0077FEF3 /* NetWorkTokenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkTokenManager.h; sourceTree = "<group>"; };
-		E16D9C17206A3C8D0077FEF3 /* NetWorkTokenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkTokenManager.m; sourceTree = "<group>"; };
+		E19FDC3D207B3BA400D50154 /* XYNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYNetworkManager.h; sourceTree = "<group>"; };
+		E19FDC3E207B3BA400D50154 /* XYNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYNetworkManager.m; sourceTree = "<group>"; };
+		E19FDC40207B3D9C00D50154 /* XYBaseRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBaseRequestManager.h; sourceTree = "<group>"; };
+		E19FDC41207B3D9C00D50154 /* XYBaseRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBaseRequestManager.m; sourceTree = "<group>"; };
+		E19FDC43207B411400D50154 /* XYHudAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHudAlert.h; sourceTree = "<group>"; };
+		E19FDC44207B411400D50154 /* XYHudAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHudAlert.m; sourceTree = "<group>"; };
 		E1E3BE372060BE6900BEFD45 /* XYRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRootViewController.h; sourceTree = "<group>"; };
 		E1E3BE382060BE6900BEFD45 /* XYRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRootViewController.m; sourceTree = "<group>"; };
 		E1E3BE392060BE6900BEFD45 /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 			children = (
 				E145194A206B9E270093F192 /* SGInfoAlert.h */,
 				E145194B206B9E270093F192 /* SGInfoAlert.m */,
-				E1451951206BAA440093F192 /* HxbHUDProgress.h */,
-				E1451952206BAA440093F192 /* HxbHUDProgress.m */,
+				E19FDC43207B411400D50154 /* XYHudAlert.h */,
+				E19FDC44207B411400D50154 /* XYHudAlert.m */,
 				E1451954206CBF4A0093F192 /* HXBRequestHudDelegate.h */,
 			);
 			path = AlertView;
@@ -330,8 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				E12746C6206CDF020036B80E /* KeyChainManager */,
-				E12746C3206CDB360036B80E /* WZHDeviceInformation.h */,
-				E12746C4206CDB370036B80E /* WZHDeviceInformation.m */,
 				E145194D206B9FAE0093F192 /* AlertView */,
 				E15DFAD71FEA737F00FBF3A8 /* VansXY_Category */,
 			);
@@ -414,10 +412,10 @@
 				E1451948206B6CAF0093F192 /* XYBaseRequest.m */,
 				E1451944206B6C480093F192 /* XYNetworkRequest.h */,
 				E1451945206B6C480093F192 /* XYNetworkRequest.m */,
-				E16D9C16206A3C8D0077FEF3 /* NetWorkTokenManager.h */,
-				E16D9C17206A3C8D0077FEF3 /* NetWorkTokenManager.m */,
-				E145194E206BA8780093F192 /* NYNetworkManager.h */,
-				E145194F206BA8780093F192 /* NYNetworkManager.m */,
+				E19FDC40207B3D9C00D50154 /* XYBaseRequestManager.h */,
+				E19FDC41207B3D9C00D50154 /* XYBaseRequestManager.m */,
+				E19FDC3D207B3BA400D50154 /* XYNetworkManager.h */,
+				E19FDC3E207B3BA400D50154 /* XYNetworkManager.m */,
 			);
 			path = XYNetWork;
 			sourceTree = "<group>";
@@ -503,6 +501,8 @@
 			children = (
 				E1FA67E31FEBC71300D84338 /* VansXYTools.h */,
 				E1FA67E41FEBC71300D84338 /* VansXYTools.m */,
+				E12746C3206CDB360036B80E /* WZHDeviceInformation.h */,
+				E12746C4206CDB370036B80E /* WZHDeviceInformation.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -711,11 +711,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15DFAE21FEA737F00FBF3A8 /* NSString+VansXY_Standard.m in Sources */,
+				E19FDC3F207B3BA400D50154 /* XYNetworkManager.m in Sources */,
 				E16D9C0E206A20A80077FEF3 /* XYSocketManege.m in Sources */,
 				E1E3BE3F2060BE6A00BEFD45 /* XYTabBarItemButton.m in Sources */,
 				E1451946206B6C480093F192 /* XYNetworkRequest.m in Sources */,
 				E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */,
 				E15DFAE01FEA737F00FBF3A8 /* NSAttributedString+Util.m in Sources */,
+				E19FDC45207B411400D50154 /* XYHudAlert.m in Sources */,
 				E1FA67E51FEBC71300D84338 /* VansXYTools.m in Sources */,
 				E145194C206B9E280093F192 /* SGInfoAlert.m in Sources */,
 				E1FA67D11FEBC2DC00D84338 /* NSDictionary+IDPExtension.m in Sources */,
@@ -724,15 +726,14 @@
 				E1FA67E11FEBC51B00D84338 /* NSObject+VansXYRuntime.m in Sources */,
 				E1E3BE422060BEC100BEFD45 /* VansXY_FirstTabVC.m in Sources */,
 				E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */,
-				E1451950206BA8780093F192 /* NYNetworkManager.m in Sources */,
 				E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */,
 				E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */,
-				E1451953206BAA440093F192 /* HxbHUDProgress.m in Sources */,
 				E1582329204E3B6300200937 /* NSString+WZHExtension.m in Sources */,
 				E16D9C0B206A20A80077FEF3 /* GCKeyChainManager.m in Sources */,
 				E1FA67C91FEBC29D00D84338 /* NSString+IDPExtension.m in Sources */,
 				E1E3BE3D2060BE6A00BEFD45 /* XYRootViewController.m in Sources */,
 				E15DFAA61FEA70F100FBF3A8 /* main.m in Sources */,
+				E19FDC42207B3D9C00D50154 /* XYBaseRequestManager.m in Sources */,
 				E16D9C0F206A20A80077FEF3 /* SocketRequestModel.m in Sources */,
 				E15DFAE11FEA737F00FBF3A8 /* NSString+VansXY_Number.m in Sources */,
 				E16D9C0C206A20A80077FEF3 /* XYErrorManage.m in Sources */,
@@ -741,7 +742,6 @@
 				E16D9C15206A31070077FEF3 /* XYNetWorkConfig.m in Sources */,
 				E16D9C0D206A20A80077FEF3 /* XYGCDAsyncSocketManage.m in Sources */,
 				E1FA67D51FEBC37B00D84338 /* UIViewController+HXBUtil.m in Sources */,
-				E16D9C18206A3C8D0077FEF3 /* NetWorkTokenManager.m in Sources */,
 				E1FA67DE1FEBC4E900D84338 /* UIResponder+FindNext.m in Sources */,
 				E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */,
 				E15DFAD21FEA736900FBF3A8 /* VasnXY_CodeNumber.m in Sources */,

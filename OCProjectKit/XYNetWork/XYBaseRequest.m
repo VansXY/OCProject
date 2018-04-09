@@ -9,7 +9,7 @@
 #import "XYBaseRequest.h"
 #import "SGInfoAlert.h"
 #import "XYNetworkRequest.h"
-#import "NYNetworkManager.h"
+#import "XYNetworkManager.h"
 
 @implementation XYBaseRequest
 
@@ -19,6 +19,14 @@
         _timeoutInterval = 20;
     }
     return  self;
+}
+
+- (instancetype)initWithDelegate:(id<HXBRequestHudDelegate>)delegate {
+    self = [self init];
+    if (self) {
+        self.hudDelegate = delegate;
+    }
+    return self;
 }
 
 - (NSDictionary *)requestHeader {
@@ -34,6 +42,7 @@
     }
     return _hudShowContent;
 }
+
 
 /**
  比较是否是同一个请求
@@ -93,7 +102,7 @@
 #endif
     self.success = success;
     self.failure = failure;
-    [[NYNetworkManager sharedManager] addRequest:self];
+    [[XYNetworkManager sharedManager] addRequest:self];
 }
 
 /**

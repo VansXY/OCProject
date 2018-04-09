@@ -1,14 +1,14 @@
 //
-//  HxbHUDProgress.h
-//  hoomxb
+//  XYHudAlert.h
+//  OCProjectKit
 //
-//  Created by HXB-C on 2017/4/18.
-//  Copyright © 2017年 hoomsun-miniX. All rights reserved.
+//  Created by HXB-xiaoYang on 2018/4/9.
+//  Copyright © 2018年 VansXY. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface HxbHUDProgress : NSObject
+@interface XYHudAlert : NSObject
 
 + (void)showTextWithMessage:(NSString *)message;
 + (void)showTextInView:(UIView*)view text:(NSString *)message;
@@ -74,5 +74,6 @@
 //  显示失败提示,指定显示视图
 + (void)showError:(NSString *)msg inview:(UIView *)view;
 ///有回调的方法
-+ (void)showMessageCenter:(NSString *) msg inView:(UIView *)view andBlock:(void(^)())block;
++ (void)showMessageCenter:(NSString *) msg inView:(UIView *)view andBlock:(void(^)(void))block;
+
 @end

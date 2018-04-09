@@ -30,15 +30,6 @@
     [self createTabBar];
 }
 
-- (UIButton *)centerBtn {
-    if (_centerBtn == nil) {
-        _centerBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 60)];
-        [_centerBtn setImage:[UIImage imageNamed:@"tabBar_center"] forState:UIControlStateNormal];
-        [_centerBtn addTarget:self action:@selector(clickCenterBtn:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _centerBtn;
-}
-
 - (void)createTabBar {
     // 把 tabBarButton 取出来（把 tabBar 的 subViews 打印出来就明白了）
     NSMutableArray *tabBarButtonArray = [NSMutableArray array];
@@ -47,7 +38,6 @@
             [tabBarButtonArray addObject:view];
         }
     }
-    
     CGFloat barWidth = self.bounds.size.width;
     CGFloat barHeight = self.bounds.size.height;
     CGFloat centerBtnWidth = CGRectGetWidth(self.centerBtn.frame);
@@ -104,6 +94,16 @@
         }
     }
     return nil;
+}
+
+#pragma mark - Setter/getter
+- (UIButton *)centerBtn {
+    if (_centerBtn == nil) {
+        _centerBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 60)];
+        [_centerBtn setImage:[UIImage imageNamed:@"tabBar_center"] forState:UIControlStateNormal];
+        [_centerBtn addTarget:self action:@selector(clickCenterBtn:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _centerBtn;
 }
 
 

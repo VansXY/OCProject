@@ -12,6 +12,7 @@
 #import "XYGCDAsyncSocketManage.h"
 #import "XYConnectConfig.h"
 #import "XYKeyChainManager.h"
+#import "XYBaseRequest.h"
 
 
 #define kDefaultChannel     @"dkf"
@@ -35,6 +36,7 @@
     [super viewDidLoad];
     
     [self buildButton];
+    [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,7 +80,17 @@
 }
 
 #pragma mark - Network
-
+- (void)loadData {
+    XYBaseRequest *bankCardAPI = [[XYBaseRequest alloc] init];
+    bankCardAPI.requestUrl = @"";
+    bankCardAPI.requestMethod = XYRequestMethodGet;
+    bankCardAPI.showHud = NO;
+    [bankCardAPI loadData:^(XYBaseRequest *request, id responseObject) {
+        
+    } failure:^(XYBaseRequest *request, NSError *error) {
+        
+    }];
+}
 
 #pragma mark - Action
 - (void)clickMe {

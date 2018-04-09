@@ -19,9 +19,6 @@ static NSString *const kResponseMessage         = @"message";
 static NSString *const kResponseData            = @"data";
 ///errorData
 static NSString *const kResponseErrorData       = @"errorData";
-///dataList
-static NSString *const kResponseDataList        = @"dataList";
-
 
 typedef NS_ENUM(NSInteger, XYRequestMethod){
     XYRequestMethodGet = 0,
@@ -35,7 +32,7 @@ typedef void (^FailureBlock)(XYBaseRequest *request, NSError *error);
 
 @interface XYBaseRequest : NSObject
 
-// ================================== request ==================================
+#pragma mark --- request
 @property (nonatomic, strong) XYNetworkRequest *networkRequest;
 /// 请求方法 Get/Post， 默认是Get
 @property (nonatomic, assign) XYRequestMethod requestMethod;
@@ -57,8 +54,7 @@ typedef void (^FailureBlock)(XYBaseRequest *request, NSError *error);
 @property (nonatomic, weak) id<HXBRequestHudDelegate> hudDelegate;
 
 
-//================================== response ==================================
-
+#pragma mark --- response
 /// 响应状态码
 @property (nonatomic, assign) NSInteger responseStatusCode;
 /// 响应头
@@ -70,14 +66,14 @@ typedef void (^FailureBlock)(XYBaseRequest *request, NSError *error);
 /// 响应出错信息
 @property (nonatomic, copy) NSString *responseErrorMessage;
 
-//================================== callback ==================================
+#pragma mark --- callback
 /// 返回成功回调
 @property (nonatomic, copy) SuccessBlock success;
 /// 返回失败回调
 @property (nonatomic, copy) FailureBlock failure;
 
 
-//- (instancetype)initWithDelegate:(id<HXBRequestHudDelegate>)delegate;
+- (instancetype)initWithDelegate:(id<HXBRequestHudDelegate>)delegate;
 
 /**
  比较是否是同一个请求

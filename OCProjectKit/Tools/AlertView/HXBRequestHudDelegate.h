@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class NYBaseRequest;
+@class XYBaseRequest;
 
 @protocol HXBRequestHudDelegate <NSObject>
 
@@ -24,7 +24,7 @@
  @param request 请求对象
  @return 是否已经做了处理
  */
-- (BOOL)erroStateCodeDeal:(NYBaseRequest *)request;
+- (BOOL)erroStateCodeDeal:(XYBaseRequest *)request;
 
 /**
  错误的响应码处理
@@ -32,5 +32,5 @@
  @param request 请求对象
  @return 是否已经做了处理
  */
-- (BOOL)erroResponseCodeDeal:(NYBaseRequest *)request;
+- (BOOL)erroResponseCodeDeal:(XYBaseRequest *)request;
 @end
