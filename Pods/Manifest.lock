@@ -39,7 +39,7 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
-  - AFNetworking
+  - AFNetworking (~> 3.1.0)
   - CocoaAsyncSocket
   - Crashlytics
   - Fabric
@@ -74,6 +74,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 03fc6eeb5c3486a9b46ae344ee5d715f545c401b
+PODFILE CHECKSUM: ff7963eb72fb44334763758f4867b306853ba692
 
 COCOAPODS: 1.4.0.rc.1

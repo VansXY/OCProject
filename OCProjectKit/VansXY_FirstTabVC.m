@@ -13,6 +13,7 @@
 #import "XYConnectConfig.h"
 #import "XYKeyChainManager.h"
 #import "XYBaseRequest.h"
+#import "XYBaseNetwork.h"
 
 
 #define kDefaultChannel     @"dkf"
@@ -20,7 +21,7 @@
 
 
 
-@interface VansXY_FirstTabVC ()
+@interface VansXY_FirstTabVC ()<HXBRequestHudDelegate>
 
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
@@ -81,13 +82,11 @@
 
 #pragma mark - Network
 - (void)loadData {
-    XYBaseRequest *bankCardAPI = [[XYBaseRequest alloc] init];
-    bankCardAPI.requestUrl = @"";
-    bankCardAPI.requestMethod = XYRequestMethodGet;
-    bankCardAPI.showHud = NO;
-    [bankCardAPI loadData:^(XYBaseRequest *request, id responseObject) {
+    [XYBaseNetwork GET:@"https://www.sojson.com/open/api/weather/json.shtml" parameters:@{@"city": @"北京"} responseCache:nil success:^(id responseObject) {
+        NSLog(@"responseObject = %@", responseObject);
         
-    } failure:^(XYBaseRequest *request, NSError *error) {
+    } failure:^(NSError *error) {
+        NSLog(@"error = %@", error);
         
     }];
 }
@@ -98,7 +97,7 @@
     _keychain = XYKeyChain.keyChain;
     _keychain[@"token"] = kToken;
     NSLog(@"%d", [_keychain setString:kToken forKey:@"token"]);
-    
+    [self loadData];
     NSDictionary *requestParams =@{};
     [[XYGCDAsyncSocketManage shareInstance] socketWriteDataWithRequestBody:requestParams completion:^(NSError * _Nullable error, id  _Nullable data) {
         NSLog(@"error = %@,\ndata = %@", error, data);

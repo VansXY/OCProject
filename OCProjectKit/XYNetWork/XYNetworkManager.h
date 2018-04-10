@@ -15,7 +15,7 @@
 
 - (void)addRequest:(XYBaseRequest *)request;
 
-- (void)addRequest:(XYBaseRequest *)request withHUD:(NSString *)content;
+- (void)addRequest:(XYBaseRequest *)request HUDContent:(NSString *)content;
 
 - (void)addRequestWithAnimation:(XYBaseRequest *)request;
 

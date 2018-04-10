@@ -41,7 +41,7 @@
         });
         return;
     }
-    
+    NSLog(@"%@", request.requestUrl);
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     // 适配重构前的HUD
@@ -54,22 +54,7 @@
             [request showLoading:content];
         }
     }
-    
-    [[XYBaseRequestManager sharedInstance] addRequest:request];
-    XYNetworkRequest *network = [[XYNetworkRequest alloc] init];
-    [network connectWithRequest:request success:^(id responseJsonObject) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    } failure:^(NSError *error) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    }];
-//    [network connectWithRequest:request success:^(NYHTTPConnection *connection, id responseJsonObject) {
-//        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-//        [self processConnection:connection withRequest:request responseJsonObject:responseJsonObject HUDProgress:hud];
-//    } failure:^(NYHTTPConnection *connection, NSError *error) {
-//
-//        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-//        [self processConnection:connection withRequest:request error:error HUDProgress:hud];
-//    }];
+    [self sendRequest:request];
 }
 
 - (void)addRequestWithAnimation:(XYBaseRequest *)request {
@@ -93,20 +78,15 @@
     }
     
     [self sendRequest:request];
-//    [connection connectWithRequest:request success:^(NYHTTPConnection *connection, id responseJsonObject) {
-//        [self processConnection:connection withRequest:request responseJsonObject:responseJsonObject HUDProgress:hud];
-//    } failure:^(NYHTTPConnection *connection, NSError *error) {
-//        [self processConnection:connection withRequest:request error:error HUDProgress:hud];
-//    }];
 }
 
 - (void)sendRequest:(XYBaseRequest *)request {
     [[XYBaseRequestManager sharedInstance] addRequest:request];
     XYNetworkRequest *network = [[XYNetworkRequest alloc] init];
     [network connectWithRequest:request success:^(id responseJsonObject) {
-        
+        NSLog(@"responseJsonObject = %@", responseJsonObject);
     } failure:^(NSError *error) {
-        
+        NSLog(@"error = %@", error);
     }];
 }
 
