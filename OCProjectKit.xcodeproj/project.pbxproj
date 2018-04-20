@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28ACF46B2089EC6800F789BD /* UIViewController+SwizzMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */; };
 		5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
@@ -74,6 +75,8 @@
 
 /* Begin PBXFileReference section */
 		05D5EC828D618318296EE058 /* Pods-OCProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.release.xcconfig"; sourceTree = "<group>"; };
+		28ACF4692089EC6800F789BD /* UIViewController+SwizzMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwizzMethod.h"; sourceTree = "<group>"; };
+		28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwizzMethod.m"; sourceTree = "<group>"; };
 		5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B485599042EE5735126C508 /* Pods-OCProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
@@ -483,6 +486,8 @@
 			children = (
 				E1FA67D31FEBC37B00D84338 /* UIViewController+HXBUtil.h */,
 				E1FA67D41FEBC37B00D84338 /* UIViewController+HXBUtil.m */,
+				28ACF4692089EC6800F789BD /* UIViewController+SwizzMethod.h */,
+				28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 				E1E3BE3E2060BE6A00BEFD45 /* XYTabBar.m in Sources */,
 				E16D9C15206A31070077FEF3 /* XYNetWorkConfig.m in Sources */,
 				E16D9C0D206A20A80077FEF3 /* XYGCDAsyncSocketManage.m in Sources */,
+				28ACF46B2089EC6800F789BD /* UIViewController+SwizzMethod.m in Sources */,
 				E1FA67D51FEBC37B00D84338 /* UIViewController+HXBUtil.m in Sources */,
 				E1FA67DE1FEBC4E900D84338 /* UIResponder+FindNext.m in Sources */,
 				E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */,
