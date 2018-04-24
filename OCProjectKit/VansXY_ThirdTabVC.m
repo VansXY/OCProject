@@ -25,7 +25,6 @@
 #pragma mark - UI
 
 - (void)setUI {
-    
 }
 
 #pragma mark - Network
