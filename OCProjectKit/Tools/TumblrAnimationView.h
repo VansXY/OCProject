@@ -19,6 +19,7 @@
 /// 运行时间
 @property (nonatomic, assign) float animationTime;
 
+/// 初始化
 - (id)initWithFrame:(CGRect)frame dotCount:(NSInteger)dotCount;
 
 /// 展示动画
