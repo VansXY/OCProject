@@ -12,6 +12,7 @@
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
 		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
+		E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = E12771FC2090511D004984AC /* HXBHFBankHudView.m */; };
 		E1451946206B6C480093F192 /* XYNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1451945206B6C480093F192 /* XYNetworkRequest.m */; };
 		E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1451948206B6CAF0093F192 /* XYBaseRequest.m */; };
 		E145194C206B9E280093F192 /* SGInfoAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E145194B206B9E270093F192 /* SGInfoAlert.m */; };
@@ -42,6 +43,7 @@
 		E19FDC49207C8B3700D50154 /* XYBaseNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC48207C8B3700D50154 /* XYBaseNetwork.m */; };
 		E19FDC4C207CA56000D50154 /* XYNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC4B207CA56000D50154 /* XYNetworkCache.m */; };
 		E1B30FAF208F22CE006128E2 /* TumblrAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B30FAE208F22CE006128E2 /* TumblrAnimationView.m */; };
+		E1B30FB2208F3E67006128E2 /* HFHudVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B30FB1208F3E67006128E2 /* HFHudVC.m */; };
 		E1E3BE3D2060BE6A00BEFD45 /* XYRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE382060BE6900BEFD45 /* XYRootViewController.m */; };
 		E1E3BE3E2060BE6A00BEFD45 /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE3A2060BE6900BEFD45 /* XYTabBar.m */; };
 		E1E3BE3F2060BE6A00BEFD45 /* XYTabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE3C2060BE6900BEFD45 /* XYTabBarItemButton.m */; };
@@ -86,6 +88,8 @@
 		E12746C4206CDB370036B80E /* WZHDeviceInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZHDeviceInformation.m; sourceTree = "<group>"; };
 		E12746C7206CDF1B0036B80E /* XYKeyChainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYKeyChainManager.h; sourceTree = "<group>"; };
 		E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYKeyChainManager.m; sourceTree = "<group>"; };
+		E12771FB2090511D004984AC /* HXBHFBankHudView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBHFBankHudView.h; sourceTree = "<group>"; };
+		E12771FC2090511D004984AC /* HXBHFBankHudView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBHFBankHudView.m; sourceTree = "<group>"; };
 		E1451944206B6C480093F192 /* XYNetworkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYNetworkRequest.h; sourceTree = "<group>"; };
 		E1451945206B6C480093F192 /* XYNetworkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYNetworkRequest.m; sourceTree = "<group>"; };
 		E1451947206B6CAF0093F192 /* XYBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBaseRequest.h; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 		E19FDC4B207CA56000D50154 /* XYNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYNetworkCache.m; sourceTree = "<group>"; };
 		E1B30FAD208F22CE006128E2 /* TumblrAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TumblrAnimationView.h; sourceTree = "<group>"; };
 		E1B30FAE208F22CE006128E2 /* TumblrAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TumblrAnimationView.m; sourceTree = "<group>"; };
+		E1B30FB0208F3E67006128E2 /* HFHudVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFHudVC.h; sourceTree = "<group>"; };
+		E1B30FB1208F3E67006128E2 /* HFHudVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFHudVC.m; sourceTree = "<group>"; };
 		E1E3BE372060BE6900BEFD45 /* XYRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRootViewController.h; sourceTree = "<group>"; };
 		E1E3BE382060BE6900BEFD45 /* XYRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRootViewController.m; sourceTree = "<group>"; };
 		E1E3BE392060BE6900BEFD45 /* XYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTabBar.h; sourceTree = "<group>"; };
@@ -346,6 +352,10 @@
 				E15DFAD71FEA737F00FBF3A8 /* VansXY_Category */,
 				E1B30FAD208F22CE006128E2 /* TumblrAnimationView.h */,
 				E1B30FAE208F22CE006128E2 /* TumblrAnimationView.m */,
+				E12771FB2090511D004984AC /* HXBHFBankHudView.h */,
+				E12771FC2090511D004984AC /* HXBHFBankHudView.m */,
+				E1B30FB0208F3E67006128E2 /* HFHudVC.h */,
+				E1B30FB1208F3E67006128E2 /* HFHudVC.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -758,6 +768,7 @@
 				E1B30FAF208F22CE006128E2 /* TumblrAnimationView.m in Sources */,
 				E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */,
 				E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */,
+				E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */,
 				E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */,
 				E1582329204E3B6300200937 /* NSString+WZHExtension.m in Sources */,
 				E16D9C0B206A20A80077FEF3 /* GCKeyChainManager.m in Sources */,
@@ -778,6 +789,7 @@
 				E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */,
 				E15DFAD21FEA736900FBF3A8 /* VasnXY_CodeNumber.m in Sources */,
 				E1FA67DB1FEBC4DE00D84338 /* UIColor+HxbColor.m in Sources */,
+				E1B30FB2208F3E67006128E2 /* HFHudVC.m in Sources */,
 				E15DFA981FEA70F100FBF3A8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

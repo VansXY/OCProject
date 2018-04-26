@@ -14,7 +14,9 @@
 #import "XYKeyChainManager.h"
 #import "XYBaseRequest.h"
 #import "XYBaseNetwork.h"
-#import "TumblrAnimationView.h"
+#import "HXBHFBankHudView.h"
+
+
 
 #define kDefaultChannel     @"dkf"
 #define kToken              @"f14c4e6f6c89335ca5909031d1a6efa9"
@@ -26,6 +28,7 @@
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
 @property (nonatomic, strong) UICKeyChainStore *keychain;
+
 
 @end
 
@@ -79,25 +82,7 @@
     [_button addTarget:self action:@selector(clickMe) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:_button];
     
-    UIView *hudView = [[UIView alloc] initWithFrame:CGRectMake(kWidth / 2 - 110, 300, 220, 95)];
-    hudView.layer.cornerRadius = 4;
-    hudView.backgroundColor = [UIColor colorWithRed:119/ 256.0 green:119/256.0 blue:119/256.0 alpha:1];
-    [self.view addSubview:hudView];
     
-    int dotCount = 6;
-    TumblrAnimationView *tumblrAnimationView = [[TumblrAnimationView alloc] initWithFrame:CGRectMake(hudView.frame.size.width / 2 - 10 * dotCount, 25, 20 * dotCount, 16) dotCount:dotCount];
-    tumblrAnimationView.dotColor = [UIColor whiteColor];
-    tumblrAnimationView.animationTime = 0.2;
-    [tumblrAnimationView showAnimated:YES];
-    tumblrAnimationView.backgroundColor = [UIColor clearColor];
-    [hudView addSubview:tumblrAnimationView];
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, tumblrAnimationView.frame.origin.y + tumblrAnimationView.frame.size.height + 14, hudView.frame.size.width, 30)];
-    label.text = @"正在跳转恒丰银行";
-    label.font = [UIFont systemFontOfSize:14];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    [hudView addSubview:label];
 
 }
 
@@ -115,6 +100,22 @@
 #pragma mark - Action
 - (void)clickMe {
     NSLog(@"点我");
+    
+//    HFHudVC *hfVC = [[HFHudVC alloc] init];
+//    hfVC.modalPresentationStyle = UIModalPresentationCustom;
+//    [self presentViewController:hfVC animated:NO completion:nil];
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (100 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [hfVC dismissViewControllerAnimated:NO completion:nil];
+//    });
+    
+    HXBHFBankHudView *view = [[HXBHFBankHudView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    view.hudContent = @"正在跳转恒丰银行";
+    [self.view addSubview:view];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        view.backView.hidden = YES;
+    });
     _keychain = XYKeyChain.keyChain;
     _keychain[@"token"] = kToken;
     NSLog(@"%d", [_keychain setString:kToken forKey:@"token"]);
