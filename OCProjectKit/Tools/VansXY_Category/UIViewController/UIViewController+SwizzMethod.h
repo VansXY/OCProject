@@ -10,4 +10,7 @@
 
 @interface UIViewController (SwizzMethod)
 
+/** 添加属性 */
+@property (nonatomic, strong)  id addProperty;
+
 @end
