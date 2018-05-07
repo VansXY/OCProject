@@ -85,14 +85,6 @@ static void initialize_Array() {
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
-- (void)setAddProperty:(NSString *)addProperty {
-    objc_setAssociatedObject(self, @selector(addProperty), addProperty, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (NSString *)addProperty {
-    return objc_getAssociatedObject(self, @selector(addProperty));
-}
-
 
 - (void)xxx_viewWillAppear:(BOOL)animated {
     /** 在 runtime 中 B 替换 A，当系统执行 A 方法的时候会被 B 替换，如果想保留 A 的方法再添加 B 的方法，那么该怎么做？如果调 再A 方法，就是 A替换成B，B 再调 A，导致循环调用了，正确的是调用 B 方法，看似自己调自己，其实不是，A 替换 B 方法，B 方法再调 B 方法，此时的 B 已经是 A 的方法了，不会发生循环调用的问题 */

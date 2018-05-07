@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2872CF43209D52B900D5BD01 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2872CF42209D52B900D5BD01 /* XYTempViewController.m */; };
 		28ACF46B2089EC6800F789BD /* UIViewController+SwizzMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */; };
 		5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */; };
 		E108715A209C7E0900F9B105 /* PRESENTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1087159209C7E0900F9B105 /* PRESENTVC.m */; };
+		E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108715C209FECC500F9B105 /* XYTempViewController.m */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
 		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
@@ -81,14 +81,14 @@
 /* Begin PBXFileReference section */
 		05D5EC828D618318296EE058 /* Pods-OCProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.release.xcconfig"; sourceTree = "<group>"; };
 		2872CF40209D4AF000D5BD01 /* CallBackName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallBackName.h; sourceTree = "<group>"; };
-		2872CF41209D52B900D5BD01 /* XYTempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTempViewController.h; sourceTree = "<group>"; };
-		2872CF42209D52B900D5BD01 /* XYTempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTempViewController.m; sourceTree = "<group>"; };
 		28ACF4692089EC6800F789BD /* UIViewController+SwizzMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwizzMethod.h"; sourceTree = "<group>"; };
 		28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwizzMethod.m"; sourceTree = "<group>"; };
 		5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B485599042EE5735126C508 /* Pods-OCProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
 		E1087158209C7E0900F9B105 /* PRESENTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRESENTVC.h; sourceTree = "<group>"; };
 		E1087159209C7E0900F9B105 /* PRESENTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRESENTVC.m; sourceTree = "<group>"; };
+		E108715C209FECC500F9B105 /* XYTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTempViewController.m; sourceTree = "<group>"; };
+		E108715D209FECC600F9B105 /* XYTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTempViewController.h; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
 		E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_ThirdTabVC.m; sourceTree = "<group>"; };
 		E12746C3206CDB360036B80E /* WZHDeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZHDeviceInformation.h; sourceTree = "<group>"; };
@@ -230,6 +230,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E108715B209FEB7400F9B105 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		E12746C6206CDF020036B80E /* KeyChainManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +267,7 @@
 				E15DFA941FEA70F100FBF3A8 /* Products */,
 				BC6CD1BC6F3A1E45DAA4DD65 /* Pods */,
 				E869198FACE58A1C97BF424B /* Frameworks */,
+				E108715B209FEB7400F9B105 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,6 +292,8 @@
 				E1E3BE412060BEC100BEFD45 /* VansXY_FirstTabVC.m */,
 				E15DFAE61FEA761600FBF3A8 /* VansXY_SecondTabVC.h */,
 				E15DFAE51FEA761600FBF3A8 /* VansXY_SecondTabVC.m */,
+				E108715D209FECC600F9B105 /* XYTempViewController.h */,
+				E108715C209FECC500F9B105 /* XYTempViewController.m */,
 				E1087158209C7E0900F9B105 /* PRESENTVC.h */,
 				E1087159209C7E0900F9B105 /* PRESENTVC.m */,
 				E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */,
@@ -778,7 +788,7 @@
 				E1E3BE422060BEC100BEFD45 /* VansXY_FirstTabVC.m in Sources */,
 				E1B30FAF208F22CE006128E2 /* TumblrAnimationView.m in Sources */,
 				E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */,
-				2872CF43209D52B900D5BD01 /* XYTempViewController.m in Sources */,
+				E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */,
 				E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */,
 				E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */,
 				E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */,
