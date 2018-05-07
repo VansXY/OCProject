@@ -7,8 +7,11 @@
 //
 
 #import "VansXY_SecondTabVC.h"
+#import "XYTempViewController.h"
 
 @interface VansXY_SecondTabVC ()
+
+@property (nonatomic, strong) UIButton *button;
 
 @end
 

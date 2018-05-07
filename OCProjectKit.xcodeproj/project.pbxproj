@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2872CF43209D52B900D5BD01 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2872CF42209D52B900D5BD01 /* XYTempViewController.m */; };
 		28ACF46B2089EC6800F789BD /* UIViewController+SwizzMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */; };
 		5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */; };
 		E108715A209C7E0900F9B105 /* PRESENTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1087159209C7E0900F9B105 /* PRESENTVC.m */; };
@@ -79,6 +80,9 @@
 
 /* Begin PBXFileReference section */
 		05D5EC828D618318296EE058 /* Pods-OCProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.release.xcconfig"; sourceTree = "<group>"; };
+		2872CF40209D4AF000D5BD01 /* CallBackName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallBackName.h; sourceTree = "<group>"; };
+		2872CF41209D52B900D5BD01 /* XYTempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTempViewController.h; sourceTree = "<group>"; };
+		2872CF42209D52B900D5BD01 /* XYTempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTempViewController.m; sourceTree = "<group>"; };
 		28ACF4692089EC6800F789BD /* UIViewController+SwizzMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwizzMethod.h"; sourceTree = "<group>"; };
 		28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwizzMethod.m"; sourceTree = "<group>"; };
 		5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +289,7 @@
 				E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */,
 				E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */,
 				E15DFAE81FEA770C00FBF3A8 /* Header.pch */,
+				2872CF40209D4AF000D5BD01 /* CallBackName.h */,
 				E16D9C11206A26810077FEF3 /* XYNetWork */,
 				E1E3BE432060FDD300BEFD45 /* XYGCDAsyncSocketManage */,
 				E1E3BE362060BE6900BEFD45 /* XYTabBar */,
@@ -773,6 +778,7 @@
 				E1E3BE422060BEC100BEFD45 /* VansXY_FirstTabVC.m in Sources */,
 				E1B30FAF208F22CE006128E2 /* TumblrAnimationView.m in Sources */,
 				E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */,
+				2872CF43209D52B900D5BD01 /* XYTempViewController.m in Sources */,
 				E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */,
 				E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */,
 				E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */,
