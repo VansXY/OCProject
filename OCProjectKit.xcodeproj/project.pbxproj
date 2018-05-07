@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		28ACF46B2089EC6800F789BD /* UIViewController+SwizzMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */; };
 		5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */; };
+		E108715A209C7E0900F9B105 /* PRESENTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1087159209C7E0900F9B105 /* PRESENTVC.m */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
 		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
@@ -82,6 +83,8 @@
 		28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwizzMethod.m"; sourceTree = "<group>"; };
 		5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B485599042EE5735126C508 /* Pods-OCProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
+		E1087158209C7E0900F9B105 /* PRESENTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRESENTVC.h; sourceTree = "<group>"; };
+		E1087159209C7E0900F9B105 /* PRESENTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRESENTVC.m; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
 		E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_ThirdTabVC.m; sourceTree = "<group>"; };
 		E12746C3206CDB360036B80E /* WZHDeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZHDeviceInformation.h; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 				E1E3BE412060BEC100BEFD45 /* VansXY_FirstTabVC.m */,
 				E15DFAE61FEA761600FBF3A8 /* VansXY_SecondTabVC.h */,
 				E15DFAE51FEA761600FBF3A8 /* VansXY_SecondTabVC.m */,
+				E1087158209C7E0900F9B105 /* PRESENTVC.h */,
+				E1087159209C7E0900F9B105 /* PRESENTVC.m */,
 				E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */,
 				E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */,
 				E15DFAE81FEA770C00FBF3A8 /* Header.pch */,
@@ -760,6 +765,7 @@
 				E1FA67E51FEBC71300D84338 /* VansXYTools.m in Sources */,
 				E145194C206B9E280093F192 /* SGInfoAlert.m in Sources */,
 				E1FA67D11FEBC2DC00D84338 /* NSDictionary+IDPExtension.m in Sources */,
+				E108715A209C7E0900F9B105 /* PRESENTVC.m in Sources */,
 				E15DFA9B1FEA70F100FBF3A8 /* ViewController.m in Sources */,
 				E19FDC49207C8B3700D50154 /* XYBaseNetwork.m in Sources */,
 				E15DFAE71FEA761700FBF3A8 /* VansXY_SecondTabVC.m in Sources */,

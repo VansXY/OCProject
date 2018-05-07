@@ -10,4 +10,6 @@
 
 @interface UIViewController (SwizzMethod)
 
+@property (nonatomic, copy) NSString *addProperty;
+
 @end

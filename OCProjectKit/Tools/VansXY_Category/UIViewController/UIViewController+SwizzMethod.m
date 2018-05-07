@@ -7,8 +7,11 @@
 //
 
 #import "UIViewController+SwizzMethod.h"
+#import <objc/runtime.h>
 
 @implementation UIViewController (SwizzMethod)
+
+@dynamic addProperty;
 
 /*
  注意以下三点：
@@ -33,10 +36,24 @@
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
+- (void)setAddProperty:(NSString *)addProperty {
+    objc_setAssociatedObject(self, @selector(addProperty), addProperty, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSString *)addProperty {
+    return objc_getAssociatedObject(self, @selector(addProperty));
+}
+
+
 - (void)xxx_viewWillAppear:(BOOL)animated {
     [self xxx_viewWillAppear:animated];
     
     NSLog(@"%@", NSStringFromClass(self.class));
+    self.addProperty = @"添加属性";
+}
+
+- (void)dealloc {
+    [self setAddProperty:nil];
 }
 
 @end

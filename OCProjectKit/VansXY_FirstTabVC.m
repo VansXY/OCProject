@@ -15,7 +15,8 @@
 #import "XYBaseRequest.h"
 #import "XYBaseNetwork.h"
 #import "HXBHFBankHudView.h"
-
+#import "PRESENTVC.h"
+#import "VansXY_SecondTabVC.h"
 
 
 #define kDefaultChannel     @"dkf"
@@ -100,7 +101,13 @@
 #pragma mark - Action
 - (void)clickMe {
     NSLog(@"点我");
-    
+    PRESENTVC *presentVC = [PRESENTVC new];
+    presentVC.block = ^(NSString *name) {
+        NSLog(@"name = %@", name);
+        [self.navigationController pushViewController:[VansXY_SecondTabVC new] animated:true];
+    };
+    [self presentViewController:presentVC animated:true completion:nil];
+//    [self.navigationController pushViewController:[PRESENTVC new] animated:true];
 //    HFHudVC *hfVC = [[HFHudVC alloc] init];
 //    hfVC.modalPresentationStyle = UIModalPresentationCustom;
 //    [self presentViewController:hfVC animated:NO completion:nil];
@@ -109,26 +116,26 @@
 //        [hfVC dismissViewControllerAnimated:NO completion:nil];
 //    });
     
-    HXBHFBankHudView *view = [[HXBHFBankHudView alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    view.hudContent = @"正在跳转恒丰银行";
-    [self.view addSubview:view];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        view.backView.hidden = YES;
-    });
-    _keychain = XYKeyChain.keyChain;
-    _keychain[@"token"] = kToken;
-    NSLog(@"%d", [_keychain setString:kToken forKey:@"token"]);
-    [self loadData];
-    NSDictionary *requestParams =@{};
-    [[XYGCDAsyncSocketManage shareInstance] socketWriteDataWithRequestBody:requestParams completion:^(NSError * _Nullable error, id  _Nullable data) {
-        NSLog(@"error = %@,\ndata = %@", error, data);
-        if (error) {
-            
-        } else {
-            
-        }
-    }];
+//    HXBHFBankHudView *view = [[HXBHFBankHudView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+//    view.hudContent = @"正在跳转恒丰银行";
+//    [self.view addSubview:view];
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        view.backView.hidden = YES;
+//    });
+//    _keychain = XYKeyChain.keyChain;
+//    _keychain[@"token"] = kToken;
+//    NSLog(@"%d", [_keychain setString:kToken forKey:@"token"]);
+//    [self loadData];
+//    NSDictionary *requestParams =@{};
+//    [[XYGCDAsyncSocketManage shareInstance] socketWriteDataWithRequestBody:requestParams completion:^(NSError * _Nullable error, id  _Nullable data) {
+//        NSLog(@"error = %@,\ndata = %@", error, data);
+//        if (error) {
+//
+//        } else {
+//
+//        }
+//    }];
 }
 
 - (void)keyChainUse {
