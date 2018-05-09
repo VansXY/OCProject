@@ -74,17 +74,41 @@
         2. 默认的遍历顺序是按照 UIView 中 Subviews 的逆顺序。
         3. 找到 hit-TestView 之后，寻找过程就结束了。
      */
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(137.5, 100, 100, 100)];
+    label.backgroundColor = [UIColor blueColor];
+    label.userInteractionEnabled = YES;
+//    [self.view addSubview:label];
+    
+    
+    //forControlEvents 和 tapGesture 先响应手势
     _button = [XYTabBarItemButton buttonWithType:(UIButtonTypeCustom)];
     _button.frame = CGRectMake(137.5, 100, 100, 100);
     _button.layer.masksToBounds = YES;
     _button.layer.cornerRadius = 50;
+    _button.alpha = 0.5;
+    _button.userInteractionEnabled = YES;
     [_button setBackgroundColor:[UIColor orangeColor]];
-    [_button setTitle:@"点我" forState:(UIControlStateNormal)];
+      [_button setTitle:@"点我" forState:(UIControlStateNormal)];
     [_button addTarget:self action:@selector(clickMe) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:_button];
     
-    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
+    [_button addGestureRecognizer:tap];
 
+}
+
+- (void)labelTap {
+    NSLog(@"点击的是label");
+    
+    /// 在地图上标记一个地址
+//    NSString* addressText =@"1 Infinite Loop, Cupertino, CA 95014";
+//
+//    addressText =  [addressText stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+//
+//    NSString* urlText = [NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", addressText];
+//
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlText]];
 }
 
 #pragma mark - Network
@@ -98,15 +122,23 @@
     }];
 }
 
+- (void)dealloc {
+    NSLog(@"销毁");
+}
+
 #pragma mark - Action
 - (void)clickMe {
-    NSLog(@"点我");
+    NSLog(@"点击的是button");
     PRESENTVC *presentVC = [PRESENTVC new];
+    
+    __block NSString *names = @"name";
+//    __weak typeof(self) weakSelf = self;
     presentVC.block = ^(NSString *name) {
         NSLog(@"name = %@", name);
+        names = name;
         [self.navigationController pushViewController:[VansXY_SecondTabVC new] animated:true];
     };
-    [self presentViewController:presentVC animated:true completion:nil];
+//    [self presentViewController:presentVC animated:true completion:nil];
 //    [self.navigationController pushViewController:[PRESENTVC new] animated:true];
 //    HFHudVC *hfVC = [[HFHudVC alloc] init];
 //    hfVC.modalPresentationStyle = UIModalPresentationCustom;
