@@ -93,8 +93,8 @@
     [_button addTarget:self action:@selector(clickMe) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:_button];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
-    [_button addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
+//    [_button addGestureRecognizer:tap];
 
 }
 
@@ -138,7 +138,7 @@
         names = name;
         [self.navigationController pushViewController:[VansXY_SecondTabVC new] animated:true];
     };
-//    [self presentViewController:presentVC animated:true completion:nil];
+    [self presentViewController:presentVC animated:true completion:nil];
 //    [self.navigationController pushViewController:[PRESENTVC new] animated:true];
 //    HFHudVC *hfVC = [[HFHudVC alloc] init];
 //    hfVC.modalPresentationStyle = UIModalPresentationCustom;

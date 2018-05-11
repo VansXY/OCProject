@@ -59,5 +59,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)applicationSignificantTimeChange:(UIApplication *)application {
+    NSLog(@"系统时间更改");
+}
+
 
 @end

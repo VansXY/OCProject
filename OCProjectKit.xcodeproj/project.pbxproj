@@ -50,6 +50,8 @@
 		E1E3BE3E2060BE6A00BEFD45 /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE3A2060BE6900BEFD45 /* XYTabBar.m */; };
 		E1E3BE3F2060BE6A00BEFD45 /* XYTabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE3C2060BE6900BEFD45 /* XYTabBarItemButton.m */; };
 		E1E3BE422060BEC100BEFD45 /* VansXY_FirstTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE412060BEC100BEFD45 /* VansXY_FirstTabVC.m */; };
+		E1EDB80420A56BED004BE9AB /* UIButton+CAEmitterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDB80320A56BED004BE9AB /* UIButton+CAEmitterLayer.m */; };
+		E1EDB80A20A56CA1004BE9AB /* EmitterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDB80920A56CA1004BE9AB /* EmitterButton.m */; };
 		E1FA67C61FEBBC7200D84338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FA67C51FEBBC7200D84338 /* Main.storyboard */; };
 		E1FA67C91FEBC29D00D84338 /* NSString+IDPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA67C71FEBC29C00D84338 /* NSString+IDPExtension.m */; };
 		E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA67CC1FEBC2D100D84338 /* NSArray+IDPExtension.m */; };
@@ -176,6 +178,10 @@
 		E1E3BE3C2060BE6900BEFD45 /* XYTabBarItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTabBarItemButton.m; sourceTree = "<group>"; };
 		E1E3BE402060BEC100BEFD45 /* VansXY_FirstTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_FirstTabVC.h; sourceTree = "<group>"; };
 		E1E3BE412060BEC100BEFD45 /* VansXY_FirstTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_FirstTabVC.m; sourceTree = "<group>"; };
+		E1EDB80220A56BED004BE9AB /* UIButton+CAEmitterLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CAEmitterLayer.h"; sourceTree = "<group>"; };
+		E1EDB80320A56BED004BE9AB /* UIButton+CAEmitterLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CAEmitterLayer.m"; sourceTree = "<group>"; };
+		E1EDB80820A56CA1004BE9AB /* EmitterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterButton.h; sourceTree = "<group>"; };
+		E1EDB80920A56CA1004BE9AB /* EmitterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterButton.m; sourceTree = "<group>"; };
 		E1FA67C51FEBBC7200D84338 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E1FA67C71FEBC29C00D84338 /* NSString+IDPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IDPExtension.m"; sourceTree = "<group>"; };
 		E1FA67C81FEBC29C00D84338 /* NSString+IDPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IDPExtension.h"; sourceTree = "<group>"; };
@@ -383,6 +389,7 @@
 		E15DFAD71FEA737F00FBF3A8 /* VansXY_Category */ = {
 			isa = PBXGroup;
 			children = (
+				E1EDB80120A56BD1004BE9AB /* UIButton */,
 				E1FA67E21FEBC6F200D84338 /* NSObject */,
 				E1FA67D81FEBC4D500D84338 /* UIColor */,
 				E1FA67D61FEBC4D400D84338 /* UIResponder */,
@@ -496,6 +503,17 @@
 				E16D9C06206A20A70077FEF3 /* Model */,
 			);
 			path = XYGCDAsyncSocketManage;
+			sourceTree = "<group>";
+		};
+		E1EDB80120A56BD1004BE9AB /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				E1EDB80220A56BED004BE9AB /* UIButton+CAEmitterLayer.h */,
+				E1EDB80320A56BED004BE9AB /* UIButton+CAEmitterLayer.m */,
+				E1EDB80820A56CA1004BE9AB /* EmitterButton.h */,
+				E1EDB80920A56CA1004BE9AB /* EmitterButton.m */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		E1FA67CA1FEBC2C800D84338 /* NSArray */ = {
@@ -801,6 +819,7 @@
 				E16D9C0F206A20A80077FEF3 /* SocketRequestModel.m in Sources */,
 				E15DFAE11FEA737F00FBF3A8 /* NSString+VansXY_Number.m in Sources */,
 				E16D9C0C206A20A80077FEF3 /* XYErrorManage.m in Sources */,
+				E1EDB80A20A56CA1004BE9AB /* EmitterButton.m in Sources */,
 				E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */,
 				E1E3BE3E2060BE6A00BEFD45 /* XYTabBar.m in Sources */,
 				E16D9C15206A31070077FEF3 /* XYNetWorkConfig.m in Sources */,
@@ -810,6 +829,7 @@
 				E1FA67DE1FEBC4E900D84338 /* UIResponder+FindNext.m in Sources */,
 				E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */,
 				E15DFAD21FEA736900FBF3A8 /* VasnXY_CodeNumber.m in Sources */,
+				E1EDB80420A56BED004BE9AB /* UIButton+CAEmitterLayer.m in Sources */,
 				E1FA67DB1FEBC4DE00D84338 /* UIColor+HxbColor.m in Sources */,
 				E1B30FB2208F3E67006128E2 /* HFHudVC.m in Sources */,
 				E15DFA981FEA70F100FBF3A8 /* AppDelegate.m in Sources */,
@@ -969,6 +989,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N83ER9BKH3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProjectKit/Header.pch";
 				INFOPLIST_FILE = OCProjectKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -984,6 +1005,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N83ER9BKH3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProjectKit/Header.pch";
 				INFOPLIST_FILE = OCProjectKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
