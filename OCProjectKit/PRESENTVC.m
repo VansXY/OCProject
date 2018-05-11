@@ -28,10 +28,34 @@
     // 发射位置
     _explosionLayer.position = CGPointMake(kWidth/2, kHeight/2);
     [self setEmitter];
-    [self setUI];  
+    [self setUI];
+    [self creatDispatch];
 }
 
 #pragma mark - UI
+
+- (void)creatDispatch {
+    /// 1.创建一个串行队列
+    dispatch_queue_t queue = dispatch_queue_create("serial", DISPATCH_QUEUE_SERIAL);
+    
+    /*
+     2.并行队列
+     
+     系统默认提供了四个全局可用的并行队列:
+     DISPATCH_QUEUE_PRIORITY_HIGH
+     DISPATCH_QUEUE_PRIORITY_DEFAULT
+     DISPATCH_QUEUE_PRIORITY_LOW
+     DISPATCH_QUEUE_PRIORITY_BACKGROUND
+     优先级依次降低。优先级越高的队列中的任务会更早执行
+     */
+    dispatch_queue_t conCurrentQueue = dispatch_queue_create("conCurrent", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t aQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    
+    /// 3.主队列(异步在主线程执行)
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.myView.backgroundColor = [UIColor purpleColor];
+    });
+}
 
 - (void)setUI {
     
