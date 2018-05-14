@@ -29,12 +29,77 @@
     _explosionLayer.position = CGPointMake(kWidth/2, kHeight/2);
     [self setEmitter];
     [self setUI];
-    [self creatDispatch];
+    
+    /*
+     // dispatch_sync会阻塞主线程，只有block里面的执行完了，才能继续往下执行，打印要放在主线程去执行，可是主线程卡死，故一直卡死
+    NSLog(@"之前 - %@", [NSThread currentThread]);
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"sync - %@", [NSThread currentThread]);
+    });
+    NSLog(@"之后 - %@", NSThread.currentThread);
+     */
+//    dispatch_queue_t queue = dispatch_queue_create("SERIALQueue", DISPATCH_QUEUE_SERIAL);
+//    NSLog(@"之前 - %@", [NSThread currentThread]);
+//    dispatch_barrier_sync(queue, ^{
+//        NSLog(@"sync - %@", [NSThread currentThread]);
+//    });
+    
+    NSLog(@"1"); // 任务1
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"2"); // 任务2
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"3"); // 任务3
+        });
+        NSLog(@"4"); // 任务4
+    });
+    NSLog(@"5"); // 任务5
+    
+//    NSLog(@"1");
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//        NSLog(@"2");
+//    });
+//    NSLog(@"3");
+    
+//    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+//    NSLog(@"1"); // 任务1
+//    dispatch_async(queue, ^{
+//        NSLog(@"2"); // 任务2
+//        dispatch_sync(queue, ^{
+//            NSLog(@"3"); // 任务3
+//        });
+//        NSLog(@"4"); // 任务4
+//    });
+//    NSLog(@"5"); // 任务5
+    
+//    dispatch_sync(queue, ^{
+//        NSLog(@"之前 - %@", NSThread.currentThread);
+//        dispatch_sync(queue, ^{
+//            NSLog(@"sync - %@", NSThread.currentThread);
+//        });
+//        NSLog(@"之后 - %@", NSThread.currentThread);
+//    });
+
+//    [self creatDispatch];
 }
 
 #pragma mark - UI
 
 - (void)creatDispatch {
+    /*
+     NSThread
+     
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(createThread) object:nil];
+    [thread start];
+    
+     @synchronized(thread)  {
+         
+     }
+    
+    [NSThread detachNewThreadSelector:@selector(createThread1) toTarget:self withObject:nil];
+    */
+    
+    /// 线程间通信
+//    [self performSelector:@selector(<#selector#>) withObject:nil afterDelay:2 inModes:@[NSRunLoopCommonModes]];
     /// 1.创建一个串行队列
     dispatch_queue_t queue = dispatch_queue_create("serial", DISPATCH_QUEUE_SERIAL);
     
