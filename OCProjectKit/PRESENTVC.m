@@ -10,7 +10,8 @@
 #import "VansXY_SecondTabVC.h"
 #import "CallBackName.h"
 #import "EmitterButton.h"
-@interface PRESENTVC ()<CallBackNameDelegate>
+
+@interface PRESENTVC ()
 
 @property (nonatomic, strong) EmitterButton *button;
 @property (nonatomic, strong) UIView *myView;
@@ -283,7 +284,10 @@
 
 - (void)clickMe:(EmitterButton *)sender {
     sender.selected = !sender.selected;
-    
+    if ([_delegate respondsToSelector:@selector(callBackName:)]) {
+        [_delegate callBackName:@"mobile"];
+    }
+    [self dismissViewControllerAnimated:true completion:nil];
 //    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 //
 //    UIGravityBehavior* gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.myView]];
@@ -417,7 +421,7 @@
 //        [self callBackName:@"name"];
 //    }
 //
-//    [self dismissViewControllerAnimated:true completion:nil];
+//
 }
 
 

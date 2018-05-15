@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CallBackName.h"
 
 typedef void(^pushClick)(NSString *name);
 
 @interface PRESENTVC : UIViewController
 
 @property (nonatomic, copy) pushClick block;
+@property (nonatomic, weak) id<CallBackNameDelegate>delegate;
 
 @end

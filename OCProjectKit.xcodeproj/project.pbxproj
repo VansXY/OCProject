@@ -11,6 +11,7 @@
 		5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */; };
 		E108715A209C7E0900F9B105 /* PRESENTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1087159209C7E0900F9B105 /* PRESENTVC.m */; };
 		E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108715C209FECC500F9B105 /* XYTempViewController.m */; };
+		E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
 		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
@@ -92,6 +93,8 @@
 		E1087159209C7E0900F9B105 /* PRESENTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRESENTVC.m; sourceTree = "<group>"; };
 		E108715C209FECC500F9B105 /* XYTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTempViewController.m; sourceTree = "<group>"; };
 		E108715D209FECC600F9B105 /* XYTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTempViewController.h; sourceTree = "<group>"; };
+		E1099EC520AACB2E00A9DF59 /* DesignDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignDelegate.h; sourceTree = "<group>"; };
+		E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignDelegate.m; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
 		E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_ThirdTabVC.m; sourceTree = "<group>"; };
 		E12746C3206CDB360036B80E /* WZHDeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZHDeviceInformation.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */,
 				E1FF13DA20AA8DE20036B8C4 /* TempView.h */,
 				E1FF13DB20AA8DE20036B8C4 /* TempView.m */,
+				E1099EC520AACB2E00A9DF59 /* DesignDelegate.h */,
+				E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */,
 				E15DFAE81FEA770C00FBF3A8 /* Header.pch */,
 				2872CF40209D4AF000D5BD01 /* CallBackName.h */,
 				E16D9C11206A26810077FEF3 /* XYNetWork */,
@@ -834,6 +839,7 @@
 				E1FA67D51FEBC37B00D84338 /* UIViewController+HXBUtil.m in Sources */,
 				E1FA67DE1FEBC4E900D84338 /* UIResponder+FindNext.m in Sources */,
 				E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */,
+				E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */,
 				E15DFAD21FEA736900FBF3A8 /* VasnXY_CodeNumber.m in Sources */,
 				E1EDB80420A56BED004BE9AB /* UIButton+CAEmitterLayer.m in Sources */,
 				E1FA67DB1FEBC4DE00D84338 /* UIColor+HxbColor.m in Sources */,

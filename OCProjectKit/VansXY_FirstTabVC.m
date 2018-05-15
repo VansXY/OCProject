@@ -18,19 +18,19 @@
 #import "PRESENTVC.h"
 #import "VansXY_SecondTabVC.h"
 #import "TempView.h"
-
+#import "CallBackName.h"
 
 #define kDefaultChannel     @"dkf"
 #define kToken              @"f14c4e6f6c89335ca5909031d1a6efa9"
 
 
 
-@interface VansXY_FirstTabVC ()<HXBRequestHudDelegate>
+@interface VansXY_FirstTabVC ()<CallBackNameDelegate>
 
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
 @property (nonatomic, strong) UICKeyChainStore *keychain;
-
+@property (nonatomic, strong) TempView *tempView;
 
 @end
 
@@ -43,9 +43,23 @@
     
     [self buildButton];
     [self loadData];
+    
     TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    _tempView = tempView;
+    [tempView addObserver:self forKeyPath:@"tempViewHeight" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
     [tempView setValue:@180 forKeyPath:@"tempViewHeight"];
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"tempViewHeight"]) {
+        NSLog(@"tempViewHeight = %@", [change valueForKey:@"new"]);
+    }
+}
+
+- (void)dealloc {
+    [_tempView removeObserver:self forKeyPath:@"tempViewHeight"];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -125,19 +139,15 @@
     }];
 }
 
-- (void)dealloc {
-    NSLog(@"销毁");
-}
-
 #pragma mark - Action
 - (void)clickMe {
     NSLog(@"点击的是button");
-    PRESENTVC *presentVC = [PRESENTVC new];
-    
+    PRESENTVC *presentVC = [[PRESENTVC alloc] init];
+    presentVC.delegate = self;
     __block NSString *names = @"name";
 //    __weak typeof(self) weakSelf = self;
     presentVC.block = ^(NSString *name) {
-        NSLog(@"name = %@", name);
+        NSLog(@"name1 = %@", name);
         names = name;
         [self.navigationController pushViewController:[VansXY_SecondTabVC new] animated:true];
     };
@@ -191,5 +201,11 @@
     _config.token = kToken;
     return _config;
 }
+
+- (void)callBackName:(NSString *)name {
+    NSLog(@"name = %@", name);
+}
+
+
 
 @end

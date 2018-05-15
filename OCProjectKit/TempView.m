@@ -33,18 +33,10 @@
     NSLog(@"tempViewHeight = %ld", tempViewHeight);
     
 //    @throw [NSException exceptionWithName:<#(nonnull NSExceptionName)#> reason:<#(nullable NSString *)#> userInfo:<#(nullable NSDictionary *)#>]
-    [self addObserver:self forKeyPath:@"tempViewHeight" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
+//    [self addObserver:self forKeyPath:@"tempViewHeight" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"tempViewHeight"]) {
-        NSLog(@"tempViewHeight = %ld", tempViewHeight);
-    }
-}
 
-- (void)dealloc {
-    [self removeObserver:self forKeyPath:@"tempViewHeight"];
-}
 
 
 @end
