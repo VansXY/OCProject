@@ -10,6 +10,7 @@
 #import "VansXY_SecondTabVC.h"
 #import "CallBackName.h"
 #import "EmitterButton.h"
+#import "OCProjectKit-Bridging-Header.h"
 
 @interface PRESENTVC ()
 
@@ -125,6 +126,9 @@
 - (void)setUI {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    NVActivityIndicatorView *activeView = [[NVActivityIndicatorView alloc] init];
+    
     
     EmitterButton *button = [EmitterButton buttonWithType:(UIButtonTypeCustom)];
     button.frame = CGRectMake(100, 100, 100, 100);

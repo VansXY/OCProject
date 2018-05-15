@@ -22,6 +22,9 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.0.8)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - ReactiveObjC (3.0.0)
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
@@ -47,6 +50,7 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD
   - MJRefresh (~> 3.0.7)
+  - NVActivityIndicatorView (~> 4.1.1)
   - ReactiveObjC
   - SDWebImage (~> 3.7.4)
   - UICKeyChainStore
@@ -54,6 +58,27 @@ DEPENDENCIES:
   - XYCategoryDemo
   - YYModel
   - YYWebImage
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - CocoaAsyncSocket
+    - Crashlytics
+    - Fabric
+    - IQKeyboardManager
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - NVActivityIndicatorView
+    - ReactiveObjC
+    - SDWebImage
+    - UICKeyChainStore
+    - WebViewJavascriptBridge
+    - XYCategoryDemo
+    - YYCache
+    - YYImage
+    - YYModel
+    - YYWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -64,6 +89,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
@@ -74,6 +100,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: ff7963eb72fb44334763758f4867b306853ba692
+PODFILE CHECKSUM: 3c2d3053354a3d474703805314605472de05d575
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.5.0

@@ -12,6 +12,7 @@
 		E108715A209C7E0900F9B105 /* PRESENTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1087159209C7E0900F9B105 /* PRESENTVC.m */; };
 		E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108715C209FECC500F9B105 /* XYTempViewController.m */; };
 		E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */; };
+		E1099ECD20AAF4DD00A9DF59 /* SwiftModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
 		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
@@ -95,6 +96,8 @@
 		E108715D209FECC600F9B105 /* XYTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTempViewController.h; sourceTree = "<group>"; };
 		E1099EC520AACB2E00A9DF59 /* DesignDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignDelegate.h; sourceTree = "<group>"; };
 		E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignDelegate.m; sourceTree = "<group>"; };
+		E1099ECB20AAF4DC00A9DF59 /* OCProjectKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCProjectKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftModule.swift; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
 		E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_ThirdTabVC.m; sourceTree = "<group>"; };
 		E12746C3206CDB360036B80E /* WZHDeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZHDeviceInformation.h; sourceTree = "<group>"; };
@@ -249,6 +252,15 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		E1099EC820AAECC400A9DF59 /* OCUseSwiftModule */ = {
+			isa = PBXGroup;
+			children = (
+				E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */,
+				E1099ECB20AAF4DC00A9DF59 /* OCProjectKit-Bridging-Header.h */,
+			);
+			path = OCUseSwiftModule;
+			sourceTree = "<group>";
+		};
 		E12746C6206CDF020036B80E /* KeyChainManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +328,7 @@
 				E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */,
 				E15DFAE81FEA770C00FBF3A8 /* Header.pch */,
 				2872CF40209D4AF000D5BD01 /* CallBackName.h */,
+				E1099EC820AAECC400A9DF59 /* OCUseSwiftModule */,
 				E16D9C11206A26810077FEF3 /* XYNetWork */,
 				E1E3BE432060FDD300BEFD45 /* XYGCDAsyncSocketManage */,
 				E1E3BE362060BE6900BEFD45 /* XYTabBar */,
@@ -612,7 +625,6 @@
 				E15DFA8F1FEA70F100FBF3A8 /* Sources */,
 				E15DFA901FEA70F100FBF3A8 /* Frameworks */,
 				E15DFA911FEA70F100FBF3A8 /* Resources */,
-				735CB7DB335B0DFF0EF0CAB1 /* [CP] Embed Pods Frameworks */,
 				49DF64C987FA21071D65399E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -671,6 +683,7 @@
 				TargetAttributes = {
 					E15DFA921FEA70F100FBF3A8 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					E15DFAAA1FEA70F100FBF3A8 = {
@@ -756,21 +769,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		735CB7DB335B0DFF0EF0CAB1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D655F64B5026792357A7CFDF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -817,6 +815,7 @@
 				E1B30FAF208F22CE006128E2 /* TumblrAnimationView.m in Sources */,
 				E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */,
 				E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */,
+				E1099ECD20AAF4DD00A9DF59 /* SwiftModule.swift in Sources */,
 				E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */,
 				E1FF13DC20AA8DE20036B8C4 /* TempView.m in Sources */,
 				E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */,
@@ -1000,13 +999,19 @@
 			baseConfigurationReference = 7B485599042EE5735126C508 /* Pods-OCProjectKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N83ER9BKH3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProjectKit/Header.pch";
 				INFOPLIST_FILE = OCProjectKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Vickate.OCProjectKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCProjectKit/OCUseSwiftModule/OCProjectKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1016,13 +1021,18 @@
 			baseConfigurationReference = 05D5EC828D618318296EE058 /* Pods-OCProjectKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N83ER9BKH3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProjectKit/Header.pch";
 				INFOPLIST_FILE = OCProjectKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Vickate.OCProjectKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCProjectKit/OCUseSwiftModule/OCProjectKit-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1030,6 +1040,7 @@
 		E15DFAC31FEA70F100FBF3A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OCProjectKitTests/Info.plist;
@@ -1044,6 +1055,7 @@
 		E15DFAC41FEA70F100FBF3A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OCProjectKitTests/Info.plist;
@@ -1058,6 +1070,7 @@
 		E15DFAC61FEA70F100FBF3A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OCProjectKitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1071,6 +1084,7 @@
 		E15DFAC71FEA70F100FBF3A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OCProjectKitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
