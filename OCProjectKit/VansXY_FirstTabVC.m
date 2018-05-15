@@ -17,6 +17,7 @@
 #import "HXBHFBankHudView.h"
 #import "PRESENTVC.h"
 #import "VansXY_SecondTabVC.h"
+#import "TempView.h"
 
 
 #define kDefaultChannel     @"dkf"
@@ -42,6 +43,8 @@
     
     [self buildButton];
     [self loadData];
+    TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [tempView setValue:@180 forKeyPath:@"tempViewHeight"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

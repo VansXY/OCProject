@@ -61,6 +61,7 @@
 		E1FA67DE1FEBC4E900D84338 /* UIResponder+FindNext.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA67DC1FEBC4E900D84338 /* UIResponder+FindNext.m */; };
 		E1FA67E11FEBC51B00D84338 /* NSObject+VansXYRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA67E01FEBC51B00D84338 /* NSObject+VansXYRuntime.m */; };
 		E1FA67E51FEBC71300D84338 /* VansXYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA67E41FEBC71300D84338 /* VansXYTools.m */; };
+		E1FF13DC20AA8DE20036B8C4 /* TempView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FF13DB20AA8DE20036B8C4 /* TempView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,8 @@
 		E1FA67E01FEBC51B00D84338 /* NSObject+VansXYRuntime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VansXYRuntime.m"; sourceTree = "<group>"; };
 		E1FA67E31FEBC71300D84338 /* VansXYTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXYTools.h; sourceTree = "<group>"; };
 		E1FA67E41FEBC71300D84338 /* VansXYTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXYTools.m; sourceTree = "<group>"; };
+		E1FF13DA20AA8DE20036B8C4 /* TempView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempView.h; sourceTree = "<group>"; };
+		E1FF13DB20AA8DE20036B8C4 /* TempView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +307,8 @@
 				E1087159209C7E0900F9B105 /* PRESENTVC.m */,
 				E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */,
 				E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */,
+				E1FF13DA20AA8DE20036B8C4 /* TempView.h */,
+				E1FF13DB20AA8DE20036B8C4 /* TempView.m */,
 				E15DFAE81FEA770C00FBF3A8 /* Header.pch */,
 				2872CF40209D4AF000D5BD01 /* CallBackName.h */,
 				E16D9C11206A26810077FEF3 /* XYNetWork */,
@@ -808,6 +813,7 @@
 				E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */,
 				E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */,
 				E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */,
+				E1FF13DC20AA8DE20036B8C4 /* TempView.m in Sources */,
 				E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */,
 				E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */,
 				E1582329204E3B6300200937 /* NSString+WZHExtension.m in Sources */,
