@@ -13,6 +13,8 @@
 		E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108715C209FECC500F9B105 /* XYTempViewController.m */; };
 		E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */; };
 		E1099ECD20AAF4DD00A9DF59 /* SwiftModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */; };
+		E1099F3320AC175400A9DF59 /* UIBezierPath+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3120AC175300A9DF59 /* UIBezierPath+YYAdd.m */; };
+		E1099F3620AC175C00A9DF59 /* UIFont+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
 		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
@@ -98,6 +100,11 @@
 		E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignDelegate.m; sourceTree = "<group>"; };
 		E1099ECB20AAF4DC00A9DF59 /* OCProjectKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCProjectKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftModule.swift; sourceTree = "<group>"; };
+		E1099F3020AC174600A9DF59 /* YYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKitMacro.h; sourceTree = "<group>"; };
+		E1099F3120AC175300A9DF59 /* UIBezierPath+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+YYAdd.m"; sourceTree = "<group>"; };
+		E1099F3220AC175400A9DF59 /* UIBezierPath+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+YYAdd.h"; sourceTree = "<group>"; };
+		E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YYAdd.m"; sourceTree = "<group>"; };
+		E1099F3520AC175C00A9DF59 /* UIFont+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YYAdd.h"; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
 		E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_ThirdTabVC.m; sourceTree = "<group>"; };
 		E12746C3206CDB360036B80E /* WZHDeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZHDeviceInformation.h; sourceTree = "<group>"; };
@@ -396,6 +403,11 @@
 		E15DFAD61FEA737F00FBF3A8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E1099F3020AC174600A9DF59 /* YYKitMacro.h */,
+				E1099F3220AC175400A9DF59 /* UIBezierPath+YYAdd.h */,
+				E1099F3120AC175300A9DF59 /* UIBezierPath+YYAdd.m */,
+				E1099F3520AC175C00A9DF59 /* UIFont+YYAdd.h */,
+				E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */,
 				E12746C6206CDF020036B80E /* KeyChainManager */,
 				E145194D206B9FAE0093F192 /* AlertView */,
 				E15DFAD71FEA737F00FBF3A8 /* VansXY_Category */,
@@ -821,6 +833,7 @@
 				E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */,
 				E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */,
 				E1582329204E3B6300200937 /* NSString+WZHExtension.m in Sources */,
+				E1099F3320AC175400A9DF59 /* UIBezierPath+YYAdd.m in Sources */,
 				E16D9C0B206A20A80077FEF3 /* GCKeyChainManager.m in Sources */,
 				E1FA67C91FEBC29D00D84338 /* NSString+IDPExtension.m in Sources */,
 				E1E3BE3D2060BE6A00BEFD45 /* XYRootViewController.m in Sources */,
@@ -841,6 +854,7 @@
 				E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */,
 				E15DFAD21FEA736900FBF3A8 /* VasnXY_CodeNumber.m in Sources */,
 				E1EDB80420A56BED004BE9AB /* UIButton+CAEmitterLayer.m in Sources */,
+				E1099F3620AC175C00A9DF59 /* UIFont+YYAdd.m in Sources */,
 				E1FA67DB1FEBC4DE00D84338 /* UIColor+HxbColor.m in Sources */,
 				E1B30FB2208F3E67006128E2 /* HFHudVC.m in Sources */,
 				E15DFA981FEA70F100FBF3A8 /* AppDelegate.m in Sources */,

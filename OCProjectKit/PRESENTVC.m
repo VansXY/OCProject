@@ -11,13 +11,17 @@
 #import "CallBackName.h"
 #import "EmitterButton.h"
 #import "OCProjectKit-Bridging-Header.h"
+#import "UIBezierPath+YYAdd.h"
+#import <CoreText/CoreText.h>
 
-@interface PRESENTVC ()
+@interface PRESENTVC ()<CAAnimationDelegate>
 
 @property (nonatomic, strong) EmitterButton *button;
 @property (nonatomic, strong) UIView *myView;
 @property (nonatomic , strong) CAEmitterLayer * explosionLayer;
 
+@property (strong,nonatomic) CAShapeLayer *textLayer;
+@property (strong,nonatomic) CALayer *penLayer;
 @end
 
 @implementation PRESENTVC
@@ -127,7 +131,6 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NVActivityIndicatorView *activeView = [[NVActivityIndicatorView alloc] init];
     
     
     EmitterButton *button = [EmitterButton buttonWithType:(UIButtonTypeCustom)];
@@ -151,19 +154,124 @@
 }
 
 - (void)tapG:(UITapGestureRecognizer *)sender {
-    CGPoint location = [sender locationInView:self.view];
-    NSString *animationKey = @"position";
-    CGFloat duration = 1.0f;
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"emitterPosition"];
-    CAEmitterLayer *presentation = (CAEmitterLayer*)[self.explosionLayer presentationLayer];
-    CGPoint currentPosition = [presentation emitterPosition];
-    [animation setFromValue:
-     [NSValue valueWithCGPoint:currentPosition]];
-    [animation setToValue:[NSValue valueWithCGPoint:location]];
-    [animation setDuration:duration];
-    [animation setFillMode:kCAFillModeForwards];
-    [animation setRemovedOnCompletion:NO];
-    [self.explosionLayer addAnimation:animation forKey:animationKey];
+    
+    _textLayer = [CAShapeLayer layer];
+    UIBezierPath *path = [UIBezierPath bezierPathWithText:@"Vickate" font:[UIFont fontWithName:@"SnellRoundhand" size:50]];
+    _textLayer.path = path.CGPath;
+    _textLayer.bounds = CGPathGetBoundingBox(path.CGPath);
+    _textLayer.position = CGPointMake(self.view.bounds.size.width/2, 550);
+    _textLayer.geometryFlipped = NO;
+    _textLayer.path = path.CGPath;
+    _textLayer.fillColor = [UIColor clearColor].CGColor;
+    _textLayer.lineWidth = 1;
+    _textLayer.strokeColor = [UIColor blackColor].CGColor;
+
+    
+    UIImage *penImg = [UIImage imageNamed:@"pen"];
+    
+    self.penLayer = [CALayer layer];
+    self.penLayer.contents = (id)penImg.CGImage;
+    self.penLayer.anchorPoint = CGPointMake(0, 1);
+    self.penLayer.bounds = CGRectMake(0, 0, penImg.size.width, penImg.size.height);
+    [self.textLayer addSublayer:self.penLayer];
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.fromValue = @(0);
+    animation.toValue = @(1);
+    animation.duration = _textLayer.bounds.size.width/20;
+    [_textLayer addAnimation:animation forKey:nil];
+    [self.view.layer addSublayer:_textLayer];
+    
+    CAKeyframeAnimation *penAnim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    penAnim.path = self.textLayer.path;
+    penAnim.duration = animation.duration;
+    penAnim.calculationMode = kCAAnimationPaced;
+    penAnim.removedOnCompletion = NO;
+    penAnim.fillMode = kCAFillModeForwards;
+    penAnim.delegate = self;
+    [self.penLayer addAnimation:penAnim forKey:@"penAnim"];
+    
+//    CGPoint location = [sender locationInView:self.view];
+//    NSString *animationKey = @"position";
+//    CGFloat duration = 1.0f;
+//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"emitterPosition"];
+//    CAEmitterLayer *presentation = (CAEmitterLayer*)[self.explosionLayer presentationLayer];
+//    CGPoint currentPosition = [presentation emitterPosition];
+//    [animation setFromValue:
+//     [NSValue valueWithCGPoint:currentPosition]];
+//    [animation setToValue:[NSValue valueWithCGPoint:location]];
+//    [animation setDuration:duration];
+//    [animation setFillMode:kCAFillModeForwards];
+//    [animation setRemovedOnCompletion:NO];
+//    [self.explosionLayer addAnimation:animation forKey:animationKey];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    [self.penLayer removeFromSuperlayer];
+    _textLayer.fillColor = [UIColor blackColor].CGColor;
+}
+
+- (UIBezierPath *)transformToBezierPath:(NSString *)string
+{
+    CGMutablePathRef paths = CGPathCreateMutable();
+    CFStringRef fontNameRef = CFSTR("SnellRoundhand");
+    CTFontRef fontRef = CTFontCreateWithName(fontNameRef, 50, nil);
+    
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:string attributes:@{(__bridge NSString *)kCTFontAttributeName: (__bridge UIFont *)fontRef}];
+    CTLineRef lineRef = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
+    CFArrayRef runArrRef = CTLineGetGlyphRuns(lineRef);
+    
+    for (int runIndex = 0; runIndex < CFArrayGetCount(runArrRef); runIndex++) {
+        const void *run = CFArrayGetValueAtIndex(runArrRef, runIndex);
+        CTRunRef runb = (CTRunRef)run;
+        
+        const void *CTFontName = kCTFontAttributeName;
+        
+        const void *runFontC = CFDictionaryGetValue(CTRunGetAttributes(runb), CTFontName);
+        CTFontRef runFontS = (CTFontRef)runFontC;
+        
+        CGFloat width = [UIScreen mainScreen].bounds.size.width;
+        
+        int temp = 0;
+        CGFloat offset = .0;
+        
+        for (int i = 0; i < CTRunGetGlyphCount(runb); i++) {
+            CFRange range = CFRangeMake(i, 1);
+            CGGlyph glyph = 0;
+            CTRunGetGlyphs(runb, range, &glyph);
+            CGPoint position = CGPointZero;
+            CTRunGetPositions(runb, range, &position);
+            
+            CGFloat temp3 = position.x;
+            int temp2 = (int)temp3/width;
+            CGFloat temp1 = 0;
+            
+            if (temp2 > temp1) {
+                temp = temp2;
+                offset = position.x - (CGFloat)temp;
+            }
+            
+            CGPathRef path = CTFontCreatePathForGlyph(runFontS, glyph, nil);
+            CGFloat x = position.x - (CGFloat)temp*width - offset;
+            CGFloat y = position.y - (CGFloat)temp * 80;
+            CGAffineTransform transform = CGAffineTransformMakeTranslation(x, y);
+            CGPathAddPath(paths, &transform, path);
+            
+            CGPathRelease(path);
+        }
+        CFRelease(runb);
+        CFRelease(runFontS);
+    }
+    
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    [bezierPath moveToPoint:CGPointZero];
+    [bezierPath appendPath:[UIBezierPath bezierPathWithCGPath:paths]];
+    
+    CGPathRelease(paths);
+    CFRelease(fontNameRef);
+    CFRelease(fontRef);
+    
+    return bezierPath;
 }
 
 - (void)startAnimation{
