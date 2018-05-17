@@ -15,6 +15,7 @@
 		E1099ECD20AAF4DD00A9DF59 /* SwiftModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */; };
 		E1099F3320AC175400A9DF59 /* UIBezierPath+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3120AC175300A9DF59 /* UIBezierPath+YYAdd.m */; };
 		E1099F3620AC175C00A9DF59 /* UIFont+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */; };
+		E1099F3920AD959200A9DF59 /* XYSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3820AD959200A9DF59 /* XYSort.m */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
 		E12746C9206CDF1B0036B80E /* XYKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C8206CDF1B0036B80E /* XYKeyChainManager.m */; };
@@ -105,6 +106,8 @@
 		E1099F3220AC175400A9DF59 /* UIBezierPath+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+YYAdd.h"; sourceTree = "<group>"; };
 		E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YYAdd.m"; sourceTree = "<group>"; };
 		E1099F3520AC175C00A9DF59 /* UIFont+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YYAdd.h"; sourceTree = "<group>"; };
+		E1099F3720AD959200A9DF59 /* XYSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSort.h; sourceTree = "<group>"; };
+		E1099F3820AD959200A9DF59 /* XYSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSort.m; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
 		E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VansXY_ThirdTabVC.m; sourceTree = "<group>"; };
 		E12746C3206CDB360036B80E /* WZHDeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZHDeviceInformation.h; sourceTree = "<group>"; };
@@ -333,6 +336,8 @@
 				E1FF13DB20AA8DE20036B8C4 /* TempView.m */,
 				E1099EC520AACB2E00A9DF59 /* DesignDelegate.h */,
 				E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */,
+				E1099F3720AD959200A9DF59 /* XYSort.h */,
+				E1099F3820AD959200A9DF59 /* XYSort.m */,
 				E15DFAE81FEA770C00FBF3A8 /* Header.pch */,
 				2872CF40209D4AF000D5BD01 /* CallBackName.h */,
 				E1099EC820AAECC400A9DF59 /* OCUseSwiftModule */,
@@ -852,6 +857,7 @@
 				E1FA67DE1FEBC4E900D84338 /* UIResponder+FindNext.m in Sources */,
 				E1451949206B6CAF0093F192 /* XYBaseRequest.m in Sources */,
 				E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */,
+				E1099F3920AD959200A9DF59 /* XYSort.m in Sources */,
 				E15DFAD21FEA736900FBF3A8 /* VasnXY_CodeNumber.m in Sources */,
 				E1EDB80420A56BED004BE9AB /* UIButton+CAEmitterLayer.m in Sources */,
 				E1099F3620AC175C00A9DF59 /* UIFont+YYAdd.m in Sources */,

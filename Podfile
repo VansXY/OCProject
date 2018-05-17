@@ -4,7 +4,7 @@ platform :ios, '8.0'
 
 target "OCProjectKit" do
 pod 'AFNetworking', '~> 3.1.0'
-pod 'MJRefresh', '~> 3.0.7'
+pod 'MJRefresh', '~> 3.1.15.1'
 pod 'SDWebImage', '~> 3.7.4'
 pod 'Masonry'
 pod 'YYModel'

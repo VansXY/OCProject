@@ -13,6 +13,7 @@
 #import "OCProjectKit-Bridging-Header.h"
 #import "UIBezierPath+YYAdd.h"
 #import <CoreText/CoreText.h>
+#import "XYSort.h"
 
 @interface PRESENTVC ()<CAAnimationDelegate>
 
@@ -48,7 +49,7 @@
 //    dispatch_barrier_sync(queue, ^{
 //        NSLog(@"sync - %@", [NSThread currentThread]);
 //    });
-    
+    XYSort *sort = [XYSort new];
     NSLog(@"1"); // 任务1
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSLog(@"2"); // 任务2
@@ -190,6 +191,8 @@
     penAnim.fillMode = kCAFillModeForwards;
     penAnim.delegate = self;
     [self.penLayer addAnimation:penAnim forKey:@"penAnim"];
+    
+    kXYTry()
     
 //    CGPoint location = [sender locationInView:self.view];
 //    NSString *animationKey = @"position";
@@ -400,6 +403,13 @@
         [_delegate callBackName:@"mobile"];
     }
     [self dismissViewControllerAnimated:true completion:nil];
+    
+    
+    
+    
+    
+    
+    
 //    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 //
 //    UIGravityBehavior* gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.myView]];
