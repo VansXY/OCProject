@@ -19,6 +19,8 @@
 #import "VansXY_SecondTabVC.h"
 #import "TempView.h"
 #import "CallBackName.h"
+// 安全认证
+#import <LocalAuthentication/LocalAuthentication.h>
 
 #define kDefaultChannel     @"dkf"
 #define kToken              @"f14c4e6f6c89335ca5909031d1a6efa9"
@@ -40,7 +42,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self checkIsSupportFaceID];
     [self buildButton];
     [self loadData];
     
@@ -72,6 +74,21 @@
 
 #pragma mark - UI
 
+- (void)checkIsSupportFaceID {
+    LAContext *context = [[LAContext alloc] init];
+    NSString *localizedReason = @"开启面容解锁，获取更多服务";
+    NSError *error = nil;
+    if ([context canEvaluatePolicy:(kLAPolicyDeviceOwnerAuthenticationWithBiometrics) error:&error]) {
+        [context evaluatePolicy:kLAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:localizedReason reply:^(BOOL success, NSError * _Nullable error) {
+            if (success) {
+                [self presentViewController:[PRESENTVC new] animated:YES completion:nil];
+            } else {
+                NSLog(@"暂不支持");
+            }
+        }];
+    }
+    
+}
 - (void)buildButton {
     
     /*

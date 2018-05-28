@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <Photos/Photos.h>
 
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) UIImageView *animatedImageView;
@@ -38,7 +39,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
     NSMutableString *m_str = [NSMutableString stringWithString:@"hello"];
     self.str1 = m_str;
     [m_str appendString:@" Lucy"];
@@ -196,6 +196,7 @@
 //        NSLog(@"保存成功");
 //    }
 //}
+
 
 
 - (void)didReceiveMemoryWarning {
