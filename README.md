@@ -1,6 +1,6 @@
 # OCProject
 
-### UI的基类和网络层框架基类
+### 里面的东西较杂，包含代码规范，自定义封装的组件，socket 编程，和 NSString 等类扩展，还有UI的基类和网络层框架基类的封装
 
 > 1. 添加工程管理类文件
 
@@ -48,7 +48,7 @@
 
 ```
 
-2. 添加GCDAsyncSocketManager的使用
+> 2. 添加GCDAsyncSocketManager的使用
 
 ```
 #pragma mark - Setter / Getter / Lazy
@@ -72,7 +72,7 @@ return _config;
 [[XYGCDAsyncSocketManage shareInstance] createSocketWithConfig:self.config];
 ```
 
-3. 添加 UICKeyChainStore 对 UIKeyChain 的使用，使用类似于NSUserDefault，方便快捷。
+> 3. 添加 UICKeyChainStore 对 UIKeyChain 的使用，使用类似于NSUserDefault，方便快捷。
 
 ```
 #import <Foundation/Foundation.h>
@@ -96,7 +96,7 @@ _keychain[@"token"] = kToken;
 NSLog(@"%d", [_keychain setString:kToken forKey:@"token"]);
 ```
 
-4. KVC 自定义TabBar
+> 4. KVC 自定义TabBar
 
 ```
 // 把 tabBarButton 取出来（把 tabBar 的 subViews 打印出来就明白了）
@@ -134,7 +134,7 @@ view.frame = frame;
 [self bringSubviewToFront:self.centerBtn];
 ```
 
-5. Category的积累
+> 5. Category的积累
 
 ```
 /// 获取设备版本号
@@ -453,6 +453,6 @@ view.frame = frame;
 - (instancetype)pinyinInitial;
 ```
 
-6. 包含全国地区文件 area.plist
+> 6. 包含全国地区文件 area.plist
 
 
