@@ -27,13 +27,20 @@
 
 
 
-@interface VansXY_FirstTabVC ()<CallBackNameDelegate>
+@interface VansXY_FirstTabVC ()<CallBackNameDelegate> {
+    NSInteger count;
+}
 
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
 @property (nonatomic, strong) UICKeyChainStore *keychain;
 @property (nonatomic, strong) TempView *tempView;
-
+/** 定时器文本 */
+@property (nonatomic, strong) UILabel *timerLabel;
+/** NSTimer *timer */
+@property (nonatomic, strong) NSTimer *timer;
+/** scrollview */
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end
 
 @implementation VansXY_FirstTabVC
@@ -46,11 +53,37 @@
     [self buildButton];
     [self loadData];
     
+    [self.view addSubview:self.scrollView];
+    
+    count = 60;
+//    NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(addTimerMethod) userInfo:nil repeats:YES];
+//    _timer = timer;
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(addTimerMethod) userInfo:nil repeats:YES];
+//        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    });
+    
     TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     _tempView = tempView;
     [tempView addObserver:self forKeyPath:@"tempViewHeight" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
     [tempView setValue:@180 forKeyPath:@"tempViewHeight"];
 }
+
+
+
+- (void)addTimerMethod {
+    self.timerLabel.text = [NSString stringWithFormat:@"倒计时：%ld", count];
+    count--;
+    if (count < 0) {
+        [_timer invalidate];
+        _timer = nil;
+        self.timerLabel.hidden = YES;
+        return;
+    }
+}
+
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"tempViewHeight"]) {
@@ -219,6 +252,26 @@
     return _config;
 }
 
+- (UILabel *)timerLabel {
+    if (!_timerLabel) {
+        _timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 200, 175, 30)];
+        _timerLabel.font = [UIFont systemFontOfSize:20];
+        _timerLabel.textColor = [UIColor whiteColor];
+        _timerLabel.backgroundColor = [UIColor purpleColor];
+        [self.scrollView addSubview:_timerLabel];
+    }
+    return _timerLabel;
+}
+
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _scrollView.contentSize = CGSizeMake(kWidth, kHeight + 20);
+        _scrollView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+        _scrollView.pagingEnabled = YES;
+    }
+    return _scrollView;
+}
 - (void)callBackName:(NSString *)name {
     NSLog(@"name = %@", name);
 }
