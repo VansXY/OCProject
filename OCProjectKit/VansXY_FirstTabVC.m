@@ -26,23 +26,51 @@
 
 
 @interface VansXY_FirstTabVC ()<CallBackNameDelegate>
-
+{
+    NSString *_testA;
+    NSString *_testB;
+}
+@property (copy, nonatomic) NSString *testA;
+@property (copy, nonatomic) NSString *testB;
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
 @property (nonatomic, strong) UICKeyChainStore *keychain;
 @property (nonatomic, strong) TempView *tempView;
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
 @implementation VansXY_FirstTabVC
+@synthesize testB = testBBBBB;
 
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.testA = @"1111";
+    self.testB = @"1111";
+    //输出结果为：self.testA = 1111,_testA = 1111,self.testB = 1111,testBBBBB = 1111,_testB = (null)
+    NSLog(@"self.testA = %@,_testA = %@,self.testB = %@,testBBBBB = %@,_testB = %@",self.testA,_testA,self.testB,testBBBBB,_testB);
+    
+    _testA = @"2222222";
+    _testB = @"2222222";
+    //输出结果为：self.testA = 2222222,_testA = 2222222,self.testB = 1111,_testB = 2222222,testBBBBB = 1111
+    NSLog(@"self.testA = %@,_testA = %@,self.testB = %@,_testB = %@,testBBBBB = %@",self.testA,_testA,self.testB,_testB,testBBBBB);
+    
+    testBBBBB = @"333333";
+    //输出结果：self.testB = 333333,testBBBBB = 333333,_testB =2222222
+    NSLog(@"self.testB = %@,testBBBBB = %@,_testB =%@",self.testB,testBBBBB,_testB);
+    
     [self buildButton];
     [self loadData];
+    
+//    [self.imageView sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@""] options:(SDWebImageOptions) progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//
+//    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//
+//    }];
+    
     
     TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     _tempView = tempView;
@@ -60,6 +88,9 @@
     [_tempView removeObserver:self forKeyPath:@"tempViewHeight"];
 }
 
+//static __inline__ NSData *dataWithImage:(UIImage *)image {
+//    return UIImage
+//}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -137,6 +168,8 @@
         NSLog(@"error = %@", error);
         
     }];
+    
+
 }
 
 #pragma mark - Action
@@ -205,7 +238,5 @@
 - (void)callBackName:(NSString *)name {
     NSLog(@"name = %@", name);
 }
-
-
 
 @end

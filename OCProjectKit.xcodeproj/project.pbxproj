@@ -13,8 +13,6 @@
 		E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108715C209FECC500F9B105 /* XYTempViewController.m */; };
 		E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */; };
 		E1099ECD20AAF4DD00A9DF59 /* SwiftModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */; };
-		E1099F3320AC175400A9DF59 /* UIBezierPath+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3120AC175300A9DF59 /* UIBezierPath+YYAdd.m */; };
-		E1099F3620AC175C00A9DF59 /* UIFont+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */; };
 		E1099F3920AD959200A9DF59 /* XYSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099F3820AD959200A9DF59 /* XYSort.m */; };
 		E12746C2206CD6D30036B80E /* VansXY_ThirdTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C1206CD6D30036B80E /* VansXY_ThirdTabVC.m */; };
 		E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = E12746C4206CDB370036B80E /* WZHDeviceInformation.m */; };
@@ -44,6 +42,7 @@
 		E16D9C0F206A20A80077FEF3 /* SocketRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D9C08206A20A70077FEF3 /* SocketRequestModel.m */; };
 		E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D9C0A206A20A70077FEF3 /* XYConnectConfig.m */; };
 		E16D9C15206A31070077FEF3 /* XYNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D9C14206A31070077FEF3 /* XYNetWorkConfig.m */; };
+		E187429720CFA54200843A35 /* XYLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E187429620CFA54200843A35 /* XYLrcLabel.m */; };
 		E19FDC3F207B3BA400D50154 /* XYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC3E207B3BA400D50154 /* XYNetworkManager.m */; };
 		E19FDC42207B3D9C00D50154 /* XYBaseRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC41207B3D9C00D50154 /* XYBaseRequestManager.m */; };
 		E19FDC45207B411400D50154 /* XYHudAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FDC44207B411400D50154 /* XYHudAlert.m */; };
@@ -57,6 +56,7 @@
 		E1E3BE422060BEC100BEFD45 /* VansXY_FirstTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3BE412060BEC100BEFD45 /* VansXY_FirstTabVC.m */; };
 		E1EDB80420A56BED004BE9AB /* UIButton+CAEmitterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDB80320A56BED004BE9AB /* UIButton+CAEmitterLayer.m */; };
 		E1EDB80A20A56CA1004BE9AB /* EmitterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EDB80920A56CA1004BE9AB /* EmitterButton.m */; };
+		E1F4827620CE7C2200AEB678 /* WechatIMG1959.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E1F4827520CE7C2200AEB678 /* WechatIMG1959.jpeg */; };
 		E1FA67C61FEBBC7200D84338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FA67C51FEBBC7200D84338 /* Main.storyboard */; };
 		E1FA67C91FEBC29D00D84338 /* NSString+IDPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA67C71FEBC29C00D84338 /* NSString+IDPExtension.m */; };
 		E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA67CC1FEBC2D100D84338 /* NSArray+IDPExtension.m */; };
@@ -101,11 +101,6 @@
 		E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DesignDelegate.m; sourceTree = "<group>"; };
 		E1099ECB20AAF4DC00A9DF59 /* OCProjectKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCProjectKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1099ECC20AAF4DD00A9DF59 /* SwiftModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftModule.swift; sourceTree = "<group>"; };
-		E1099F3020AC174600A9DF59 /* YYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKitMacro.h; sourceTree = "<group>"; };
-		E1099F3120AC175300A9DF59 /* UIBezierPath+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+YYAdd.m"; sourceTree = "<group>"; };
-		E1099F3220AC175400A9DF59 /* UIBezierPath+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+YYAdd.h"; sourceTree = "<group>"; };
-		E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+YYAdd.m"; sourceTree = "<group>"; };
-		E1099F3520AC175C00A9DF59 /* UIFont+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+YYAdd.h"; sourceTree = "<group>"; };
 		E1099F3720AD959200A9DF59 /* XYSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSort.h; sourceTree = "<group>"; };
 		E1099F3820AD959200A9DF59 /* XYSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSort.m; sourceTree = "<group>"; };
 		E12746C0206CD6D30036B80E /* VansXY_ThirdTabVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VansXY_ThirdTabVC.h; sourceTree = "<group>"; };
@@ -173,6 +168,8 @@
 		E16D9C12206A280D0077FEF3 /* RequestUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestUrl.h; sourceTree = "<group>"; };
 		E16D9C13206A31070077FEF3 /* XYNetWorkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYNetWorkConfig.h; sourceTree = "<group>"; };
 		E16D9C14206A31070077FEF3 /* XYNetWorkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYNetWorkConfig.m; sourceTree = "<group>"; };
+		E187429520CFA54200843A35 /* XYLrcLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYLrcLabel.h; sourceTree = "<group>"; };
+		E187429620CFA54200843A35 /* XYLrcLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYLrcLabel.m; sourceTree = "<group>"; };
 		E19FDC3D207B3BA400D50154 /* XYNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYNetworkManager.h; sourceTree = "<group>"; };
 		E19FDC3E207B3BA400D50154 /* XYNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYNetworkManager.m; sourceTree = "<group>"; };
 		E19FDC40207B3D9C00D50154 /* XYBaseRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBaseRequestManager.h; sourceTree = "<group>"; };
@@ -199,6 +196,7 @@
 		E1EDB80320A56BED004BE9AB /* UIButton+CAEmitterLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CAEmitterLayer.m"; sourceTree = "<group>"; };
 		E1EDB80820A56CA1004BE9AB /* EmitterButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmitterButton.h; sourceTree = "<group>"; };
 		E1EDB80920A56CA1004BE9AB /* EmitterButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmitterButton.m; sourceTree = "<group>"; };
+		E1F4827520CE7C2200AEB678 /* WechatIMG1959.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG1959.jpeg; sourceTree = "<group>"; };
 		E1FA67C51FEBBC7200D84338 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E1FA67C71FEBC29C00D84338 /* NSString+IDPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+IDPExtension.m"; sourceTree = "<group>"; };
 		E1FA67C81FEBC29C00D84338 /* NSString+IDPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+IDPExtension.h"; sourceTree = "<group>"; };
@@ -348,6 +346,7 @@
 				E15DFAD31FEA737900FBF3A8 /* Resource */,
 				E15DFAC81FEA736900FBF3A8 /* Macro */,
 				E15DFA9F1FEA70F100FBF3A8 /* Assets.xcassets */,
+				E1F4827520CE7C2200AEB678 /* WechatIMG1959.jpeg */,
 				E15DFAA11FEA70F100FBF3A8 /* LaunchScreen.storyboard */,
 				E1FA67C51FEBBC7200D84338 /* Main.storyboard */,
 				E15DFAA41FEA70F100FBF3A8 /* Info.plist */,
@@ -408,11 +407,6 @@
 		E15DFAD61FEA737F00FBF3A8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				E1099F3020AC174600A9DF59 /* YYKitMacro.h */,
-				E1099F3220AC175400A9DF59 /* UIBezierPath+YYAdd.h */,
-				E1099F3120AC175300A9DF59 /* UIBezierPath+YYAdd.m */,
-				E1099F3520AC175C00A9DF59 /* UIFont+YYAdd.h */,
-				E1099F3420AC175C00A9DF59 /* UIFont+YYAdd.m */,
 				E12746C6206CDF020036B80E /* KeyChainManager */,
 				E145194D206B9FAE0093F192 /* AlertView */,
 				E15DFAD71FEA737F00FBF3A8 /* VansXY_Category */,
@@ -422,6 +416,8 @@
 				E12771FC2090511D004984AC /* HXBHFBankHudView.m */,
 				E1B30FB0208F3E67006128E2 /* HFHudVC.h */,
 				E1B30FB1208F3E67006128E2 /* HFHudVC.m */,
+				E187429520CFA54200843A35 /* XYLrcLabel.h */,
+				E187429620CFA54200843A35 /* XYLrcLabel.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -741,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15DFAA31FEA70F100FBF3A8 /* LaunchScreen.storyboard in Resources */,
+				E1F4827620CE7C2200AEB678 /* WechatIMG1959.jpeg in Resources */,
 				E15DFAD51FEA737A00FBF3A8 /* area.plist in Resources */,
 				E15DFAA01FEA70F100FBF3A8 /* Assets.xcassets in Resources */,
 				E1FA67C61FEBBC7200D84338 /* Main.storyboard in Resources */,
@@ -832,13 +829,13 @@
 				E1B30FAF208F22CE006128E2 /* TumblrAnimationView.m in Sources */,
 				E12746C5206CDB370036B80E /* WZHDeviceInformation.m in Sources */,
 				E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */,
+				E187429720CFA54200843A35 /* XYLrcLabel.m in Sources */,
 				E1099ECD20AAF4DD00A9DF59 /* SwiftModule.swift in Sources */,
 				E1FA67CE1FEBC2D100D84338 /* NSArray+IDPExtension.m in Sources */,
 				E1FF13DC20AA8DE20036B8C4 /* TempView.m in Sources */,
 				E12771FD2090511D004984AC /* HXBHFBankHudView.m in Sources */,
 				E16D9C10206A20A80077FEF3 /* XYConnectConfig.m in Sources */,
 				E1582329204E3B6300200937 /* NSString+WZHExtension.m in Sources */,
-				E1099F3320AC175400A9DF59 /* UIBezierPath+YYAdd.m in Sources */,
 				E16D9C0B206A20A80077FEF3 /* GCKeyChainManager.m in Sources */,
 				E1FA67C91FEBC29D00D84338 /* NSString+IDPExtension.m in Sources */,
 				E1E3BE3D2060BE6A00BEFD45 /* XYRootViewController.m in Sources */,
@@ -860,7 +857,6 @@
 				E1099F3920AD959200A9DF59 /* XYSort.m in Sources */,
 				E15DFAD21FEA736900FBF3A8 /* VasnXY_CodeNumber.m in Sources */,
 				E1EDB80420A56BED004BE9AB /* UIButton+CAEmitterLayer.m in Sources */,
-				E1099F3620AC175C00A9DF59 /* UIFont+YYAdd.m in Sources */,
 				E1FA67DB1FEBC4DE00D84338 /* UIColor+HxbColor.m in Sources */,
 				E1B30FB2208F3E67006128E2 /* HFHudVC.m in Sources */,
 				E15DFA981FEA70F100FBF3A8 /* AppDelegate.m in Sources */,

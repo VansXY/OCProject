@@ -19,4 +19,7 @@ pod 'Crashlytics'
 pod 'XYCategoryDemo'
 pod 'CocoaAsyncSocket'
 pod 'NVActivityIndicatorView', '~> 4.1.1'
+pod 'YYCategories'
+
+
 end

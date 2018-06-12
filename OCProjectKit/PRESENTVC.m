@@ -23,6 +23,10 @@
 
 @property (strong,nonatomic) CAShapeLayer *textLayer;
 @property (strong,nonatomic) CALayer *penLayer;
+
+@property (strong, nonatomic) UIImageView *backImageView;
+@property (strong, nonatomic) CAShapeLayer *layer;
+
 @end
 
 @implementation PRESENTVC
@@ -50,15 +54,15 @@
 //        NSLog(@"sync - %@", [NSThread currentThread]);
 //    });
     XYSort *sort = [XYSort new];
-    NSLog(@"1"); // 任务1
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSLog(@"2"); // 任务2
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            NSLog(@"3"); // 任务3
-        });
-        NSLog(@"4"); // 任务4
-    });
-    NSLog(@"5"); // 任务5
+//    NSLog(@"1"); // 任务1
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        NSLog(@"2"); // 任务2
+//        dispatch_sync(dispatch_get_main_queue(), ^{
+//            NSLog(@"3"); // 任务3
+//        });
+//        NSLog(@"4"); // 任务4
+//    });
+//    NSLog(@"5"); // 任务5
     
 //    NSLog(@"1");
 //    dispatch_sync(dispatch_get_main_queue(), ^{
@@ -66,16 +70,7 @@
 //    });
 //    NSLog(@"3");
     
-//    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
-//    NSLog(@"1"); // 任务1
-//    dispatch_async(queue, ^{
-//        NSLog(@"2"); // 任务2
-//        dispatch_sync(queue, ^{
-//            NSLog(@"3"); // 任务3
-//        });
-//        NSLog(@"4"); // 任务4
-//    });
-//    NSLog(@"5"); // 任务5
+    
     
 //    dispatch_sync(queue, ^{
 //        NSLog(@"之前 - %@", NSThread.currentThread);
@@ -88,6 +83,44 @@
 //    [self creatDispatch];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"1"); // 任务1
+    dispatch_async(queue, ^{
+        NSLog(@"2"); // 任务2
+        
+        //        NSLog(@"4"); // 任务4
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"3"); // 任务3
+    });
+    NSLog(@"5"); // 任务5
+}
+
+- (void)quickSortArray:(NSMutableArray *)array leftIndex:(NSInteger)leftIndex rightIndex:(NSInteger)rightIndex {
+    if (leftIndex >=  rightIndex) {
+        return;
+    }
+    NSInteger i = leftIndex;
+    NSInteger j = rightIndex;
+    NSInteger targetNumber = (NSInteger)array[i];
+    
+    while (i < j) {
+        while (i < j && (NSInteger)array[j] > targetNumber) {
+            j--;
+        }
+        array[i] = array[j];
+        
+        while (i < j && (NSInteger)array[j] < targetNumber) {
+            i++;
+        }
+        array[j] = array[i];
+    }
+    array[i] = @(targetNumber);
+    [self quickSortArray:array leftIndex:leftIndex rightIndex:i-1];
+    [self quickSortArray:array leftIndex:i+1 rightIndex:rightIndex];
+}
 #pragma mark - UI
 
 - (void)creatDispatch {
@@ -132,7 +165,12 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
+    UIImageView *backImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WechatIMG1959.jpeg"]];
+    backImageView.frame = CGRectMake(0, 300, 375, 375);
+    backImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:backImageView];
+    _backImageView = backImageView;
+    [self addMakLayer];
     
     EmitterButton *button = [EmitterButton buttonWithType:(UIButtonTypeCustom)];
     button.frame = CGRectMake(100, 100, 100, 100);
@@ -145,13 +183,38 @@
     [self.view addSubview:button];
     _button = button;
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 300, 50, 50)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 50, 50)];
     view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:view];
     _myView = view;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapG:)];
     [_myView addGestureRecognizer:tap];
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panG:)];
+    [_backImageView addGestureRecognizer:pan];
+}
+
+- (void)panG:(UIPanGestureRecognizer *)pan {
+    
+    NSLog(@"%@", NSStringFromCGPoint(pan.accessibilityActivationPoint));
+}
+
+// 创建一个圆形遮罩
+- (CALayer *)maskRediusCorner:(UIImageView *)imageView point:(CGPoint)point {
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame = imageView.bounds;
+    maskLayer.path = [UIBezierPath bezierPathWithArcCenter:point radius:100 startAngle:0 endAngle:2*M_PI clockwise:YES].CGPath;
+    return maskLayer;
+}
+
+// 创建一个遮罩
+- (void)addMakLayer {
+    _layer = [CAShapeLayer layer];
+    _layer.frame = CGRectMake(100, 300, 50, 50);
+    _layer.backgroundColor = [UIColor whiteColor].CGColor;
+    _layer.path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(_backImageView.frame.size.width / 2, _backImageView.frame.size.height / 2) radius:100 startAngle:0 endAngle:2 * M_PI clockwise:YES].CGPath;
+    _backImageView.layer.mask = _layer;
 }
 
 - (void)tapG:(UITapGestureRecognizer *)sender {

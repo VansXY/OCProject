@@ -11,6 +11,8 @@
 /** 委托 */
 @protocol CallBackNameDelegate <NSObject>
 
+//@property (nonatomic, strong) NSString *name;
+
 /** 必须要实现的方法 */
 @required
 - (void)callBackName:(NSString *)name;

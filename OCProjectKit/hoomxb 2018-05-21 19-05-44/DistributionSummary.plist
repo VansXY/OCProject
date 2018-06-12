@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hoomxb.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>AC819927AF3A2C79491ACB78DC2984FDBE05315E</string>
+				<key>dateExpires</key>
+				<string>2018/9/27</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>Z9M2NMJFP5.com.hoomsun.hoombaby</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>Z9M2NMJFP5</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>hoomxb.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>032afef7-520c-4a04-bd51-3dd1ad5a3520</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.hoomsun.hoombaby</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>Z9M2NMJFP5</string>
+				<key>name</key>
+				<string>Hoomsun Financial Information Services Shanghai Co.,Ltd.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
