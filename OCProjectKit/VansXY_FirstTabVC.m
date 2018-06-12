@@ -27,59 +27,47 @@
 
 
 
-<<<<<<< HEAD
-@interface VansXY_FirstTabVC ()<CallBackNameDelegate>
-{
-    NSString *_testA;
-    NSString *_testB;
-}
-@property (copy, nonatomic) NSString *testA;
-@property (copy, nonatomic) NSString *testB;
-=======
 @interface VansXY_FirstTabVC ()<CallBackNameDelegate> {
     NSInteger count;
 }
 
->>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
+
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
 @property (nonatomic, strong) UICKeyChainStore *keychain;
 @property (nonatomic, strong) TempView *tempView;
-<<<<<<< HEAD
+
 @property (nonatomic, strong) UIImageView *imageView;
 
-=======
+
 /** 定时器文本 */
 @property (nonatomic, strong) UILabel *timerLabel;
 /** NSTimer *timer */
 @property (nonatomic, strong) NSTimer *timer;
 /** scrollview */
 @property (nonatomic, strong) UIScrollView *scrollView;
->>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
 @end
 
 @implementation VansXY_FirstTabVC
-@synthesize testB = testBBBBB;
 
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-<<<<<<< HEAD
     
-    self.testA = @"1111";
-    self.testB = @"1111";
-    //输出结果为：self.testA = 1111,_testA = 1111,self.testB = 1111,testBBBBB = 1111,_testB = (null)
-    NSLog(@"self.testA = %@,_testA = %@,self.testB = %@,testBBBBB = %@,_testB = %@",self.testA,_testA,self.testB,testBBBBB,_testB);
-    
-    _testA = @"2222222";
-    _testB = @"2222222";
-    //输出结果为：self.testA = 2222222,_testA = 2222222,self.testB = 1111,_testB = 2222222,testBBBBB = 1111
-    NSLog(@"self.testA = %@,_testA = %@,self.testB = %@,_testB = %@,testBBBBB = %@",self.testA,_testA,self.testB,_testB,testBBBBB);
-    
-    testBBBBB = @"333333";
-    //输出结果：self.testB = 333333,testBBBBB = 333333,_testB =2222222
-    NSLog(@"self.testB = %@,testBBBBB = %@,_testB =%@",self.testB,testBBBBB,_testB);
+//    self.testA = @"1111";
+//    self.testB = @"1111";
+//    //输出结果为：self.testA = 1111,_testA = 1111,self.testB = 1111,testBBBBB = 1111,_testB = (null)
+//    NSLog(@"self.testA = %@,_testA = %@,self.testB = %@,testBBBBB = %@,_testB = %@",self.testA,_testA,self.testB,testBBBBB,_testB);
+//
+//    _testA = @"2222222";
+//    _testB = @"2222222";
+//    //输出结果为：self.testA = 2222222,_testA = 2222222,self.testB = 1111,_testB = 2222222,testBBBBB = 1111
+//    NSLog(@"self.testA = %@,_testA = %@,self.testB = %@,_testB = %@,testBBBBB = %@",self.testA,_testA,self.testB,_testB,testBBBBB);
+//
+//    testBBBBB = @"333333";
+//    //输出结果：self.testB = 333333,testBBBBB = 333333,_testB =2222222
+//    NSLog(@"self.testB = %@,testBBBBB = %@,_testB =%@",self.testB,testBBBBB,_testB);
     
     [self buildButton];
     [self loadData];
@@ -90,7 +78,6 @@
 //
 //    }];
     
-=======
     [self checkIsSupportFaceID];
     [self buildButton];
     [self loadData];
@@ -105,12 +92,11 @@
         [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(addTimerMethod) userInfo:nil repeats:YES];
 //        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     });
->>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
     
-    TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    _tempView = tempView;
-    [tempView addObserver:self forKeyPath:@"tempViewHeight" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
-    [tempView setValue:@180 forKeyPath:@"tempViewHeight"];
+//    TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+//    _tempView = tempView;
+//    [tempView addObserver:self forKeyPath:@"tempViewHeight" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
+//    [tempView setValue:@180 forKeyPath:@"tempViewHeight"];
 }
 
 
