@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 module NVActivityIndicatorView [system] {
+=======
+module NVActivityIndicatorView {
+>>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
   umbrella header "NVActivityIndicatorView-umbrella.h"
 
   export *

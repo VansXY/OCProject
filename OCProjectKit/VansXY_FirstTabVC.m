@@ -19,12 +19,15 @@
 #import "VansXY_SecondTabVC.h"
 #import "TempView.h"
 #import "CallBackName.h"
+// 安全认证
+#import <LocalAuthentication/LocalAuthentication.h>
 
 #define kDefaultChannel     @"dkf"
 #define kToken              @"f14c4e6f6c89335ca5909031d1a6efa9"
 
 
 
+<<<<<<< HEAD
 @interface VansXY_FirstTabVC ()<CallBackNameDelegate>
 {
     NSString *_testA;
@@ -32,12 +35,27 @@
 }
 @property (copy, nonatomic) NSString *testA;
 @property (copy, nonatomic) NSString *testB;
+=======
+@interface VansXY_FirstTabVC ()<CallBackNameDelegate> {
+    NSInteger count;
+}
+
+>>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
 @property (nonatomic, strong) XYTabBarItemButton *button;
 @property (nonatomic, strong) XYConnectConfig *config;
 @property (nonatomic, strong) UICKeyChainStore *keychain;
 @property (nonatomic, strong) TempView *tempView;
+<<<<<<< HEAD
 @property (nonatomic, strong) UIImageView *imageView;
 
+=======
+/** 定时器文本 */
+@property (nonatomic, strong) UILabel *timerLabel;
+/** NSTimer *timer */
+@property (nonatomic, strong) NSTimer *timer;
+/** scrollview */
+@property (nonatomic, strong) UIScrollView *scrollView;
+>>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
 @end
 
 @implementation VansXY_FirstTabVC
@@ -47,6 +65,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
     
     self.testA = @"1111";
     self.testB = @"1111";
@@ -71,12 +90,43 @@
 //
 //    }];
     
+=======
+    [self checkIsSupportFaceID];
+    [self buildButton];
+    [self loadData];
+    
+    [self.view addSubview:self.scrollView];
+    
+    count = 60;
+//    NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(addTimerMethod) userInfo:nil repeats:YES];
+//    _timer = timer;
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(addTimerMethod) userInfo:nil repeats:YES];
+//        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    });
+>>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
     
     TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     _tempView = tempView;
     [tempView addObserver:self forKeyPath:@"tempViewHeight" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld) context:nil];
     [tempView setValue:@180 forKeyPath:@"tempViewHeight"];
 }
+
+
+
+- (void)addTimerMethod {
+    self.timerLabel.text = [NSString stringWithFormat:@"倒计时：%ld", count];
+    count--;
+    if (count < 0) {
+        [_timer invalidate];
+        _timer = nil;
+        self.timerLabel.hidden = YES;
+        return;
+    }
+}
+
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"tempViewHeight"]) {
@@ -103,6 +153,21 @@
 
 #pragma mark - UI
 
+- (void)checkIsSupportFaceID {
+    LAContext *context = [[LAContext alloc] init];
+    NSString *localizedReason = @"开启面容解锁，获取更多服务";
+    NSError *error = nil;
+    if ([context canEvaluatePolicy:(kLAPolicyDeviceOwnerAuthenticationWithBiometrics) error:&error]) {
+        [context evaluatePolicy:kLAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:localizedReason reply:^(BOOL success, NSError * _Nullable error) {
+            if (success) {
+                [self presentViewController:[PRESENTVC new] animated:YES completion:nil];
+            } else {
+                NSLog(@"暂不支持");
+            }
+        }];
+    }
+    
+}
 - (void)buildButton {
     
     /*
@@ -235,6 +300,26 @@
     return _config;
 }
 
+- (UILabel *)timerLabel {
+    if (!_timerLabel) {
+        _timerLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 200, 175, 30)];
+        _timerLabel.font = [UIFont systemFontOfSize:20];
+        _timerLabel.textColor = [UIColor whiteColor];
+        _timerLabel.backgroundColor = [UIColor purpleColor];
+        [self.scrollView addSubview:_timerLabel];
+    }
+    return _timerLabel;
+}
+
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _scrollView.contentSize = CGSizeMake(kWidth, kHeight + 20);
+        _scrollView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+        _scrollView.pagingEnabled = YES;
+    }
+    return _scrollView;
+}
 - (void)callBackName:(NSString *)name {
     NSLog(@"name = %@", name);
 }
