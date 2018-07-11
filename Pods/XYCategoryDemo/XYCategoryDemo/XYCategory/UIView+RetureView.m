@@ -28,28 +28,28 @@
 
 - (nullable UIView *)hitMyTest:(CGPoint)point withEvent:(nullable UIEvent *)event {
     UIView *myView = [self hitMyTest:point withEvent:event];
-//
-//    int count = (int)self.subviews.count;
-//    for (int i = count - 1; i >= 0; i--) {
-//        UIView *childView = self.subviews[i];
-//        if ([NSStringFromClass(childView.class) isEqualToString:NSStringFromClass(myView.class)]) {
-//            NSString *vcString = NSStringFromClass([self getCurrentViewController].class);
-//            NSString *newString = [[NSUserDefaults standardUserDefaults] valueForKey:@"newViewController"];
-//            if (![vcString isEqualToString:newString] && [vcString hasSuffix:@"ViewController"]) {
-//                NSString *nowDate = [PostSessionTask getNowData];
-//                [[NSUserDefaults standardUserDefaults] setObject:vcString forKey:@"newViewController"];
-//                NSString *titleLable = @"";
-//                if ([NSStringFromClass(myView.class) isEqualToString:@"UIButton"]) {
-//                    UIButton *myButton = (UIButton *)myView;
-//                    titleLable = myButton.titleLabel.text;
-//                } else {
-//                    titleLable = @"";
-//                }
-//                NSString *string_post = [NSString stringWithFormat:@"viewController=%@&view=%@&classFrame=%@&clickTime=%@&titleLabel=%@&unifyCode=maoxiaodai", vcString, NSStringFromClass(myView.class), NSStringFromCGRect(myView.frame), nowDate, titleLable];
-//                [[PostSessionTask shareHandle] sendMessageWithUrl:kGetMobclickUrl parameters:string_post];
-//            }
-//        }
-//    }
+    
+    int count = (int)self.subviews.count;
+    for (int i = count - 1; i >= 0; i--) {
+        UIView *childView = self.subviews[i];
+        if ([NSStringFromClass(childView.class) isEqualToString:NSStringFromClass(myView.class)]) {
+            NSString *vcString = NSStringFromClass([self getCurrentViewController].class);
+            NSString *newString = [[NSUserDefaults standardUserDefaults] valueForKey:@"newViewController"];
+            if (![vcString isEqualToString:newString] && [vcString hasSuffix:@"ViewController"]) {
+                NSString *nowDate = [PostSessionTask getNowData];
+                [[NSUserDefaults standardUserDefaults] setObject:vcString forKey:@"newViewController"];
+                NSString *titleLable = @"";
+                if ([NSStringFromClass(myView.class) isEqualToString:@"UIButton"]) {
+                    UIButton *myButton = (UIButton *)myView;
+                    titleLable = myButton.titleLabel.text;
+                } else {
+                    titleLable = @"";
+                }
+                NSString *string_post = [NSString stringWithFormat:@"viewController=%@&view=%@&classFrame=%@&clickTime=%@&titleLabel=%@&unifyCode=maoxiaodai", vcString, NSStringFromClass(myView.class), NSStringFromCGRect(myView.frame), nowDate, titleLable];
+                [[PostSessionTask shareHandle] sendMessageWithUrl:kGetMobclickUrl parameters:string_post];
+            }
+        }
+    }
     return myView;
 
 }

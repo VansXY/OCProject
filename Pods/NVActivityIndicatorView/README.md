@@ -153,7 +153,7 @@ activityIndicatorView.stopAnimating()
 Determine if it is animating.
 
 ```swift
-animating = activityIndicatorView.animating
+animating = activityIndicatorView.isAnimating
 ```
 
 ### Change properties
@@ -186,6 +186,12 @@ Stop animating.
 stopAnimating()
 ```
 
+Check if it is animating.
+
+```swift
+animating = isAnimating
+```
+
 Or you can use `NVActivityIndicatorPresenter` to display UI blocker anywhere.
 
 Start animating.
@@ -210,6 +216,22 @@ Change message.
 NVActivityIndicatorPresenter.sharedInstance.setMessage("Done")
 ```
 
+Check if it is animating.
+
+```swift
+animating = NVActivityIndicatorPresenter.sharedInstance.isAnimating
+```
+
+#### Fade in/out animation
+
+You have control over showing and hiding UI blocker animation.
+
+```swift
+startAnimating(fadeInAnimation: fadeInAnimation)
+stopAnimating(fadeOutAnimation)
+```
+
+Check `DEFAULT_FADE_IN_ANIMATION` and `DEFAULT_FADE_OUT_ANIMATION` for examples of how to implement animation.
 
 ## Acknowledgment
 

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06F1EF7A3BF27F22A228616A /* Pods_OCProjectKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82F1BF6141D0AD784F4BCF3 /* Pods_OCProjectKit.framework */; };
 		28ACF46B2089EC6800F789BD /* UIViewController+SwizzMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */; };
-		5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */; };
 		E108715A209C7E0900F9B105 /* PRESENTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1087159209C7E0900F9B105 /* PRESENTVC.m */; };
 		E108715E209FECC600F9B105 /* XYTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108715C209FECC500F9B105 /* XYTempViewController.m */; };
 		E1099EC720AACB2E00A9DF59 /* DesignDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1099EC620AACB2E00A9DF59 /* DesignDelegate.m */; };
@@ -87,12 +87,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05D5EC828D618318296EE058 /* Pods-OCProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.release.xcconfig"; sourceTree = "<group>"; };
+		181CE0997F74C16061419CBD /* Pods-OCProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
 		2872CF40209D4AF000D5BD01 /* CallBackName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallBackName.h; sourceTree = "<group>"; };
 		28ACF4692089EC6800F789BD /* UIViewController+SwizzMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SwizzMethod.h"; sourceTree = "<group>"; };
 		28ACF46A2089EC6800F789BD /* UIViewController+SwizzMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SwizzMethod.m"; sourceTree = "<group>"; };
-		5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCProjectKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B485599042EE5735126C508 /* Pods-OCProjectKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.debug.xcconfig"; sourceTree = "<group>"; };
+		A82F1BF6141D0AD784F4BCF3 /* Pods_OCProjectKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCProjectKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A938C205096D5793F5E4E0DC /* Pods-OCProjectKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProjectKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit.release.xcconfig"; sourceTree = "<group>"; };
 		E1087158209C7E0900F9B105 /* PRESENTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRESENTVC.h; sourceTree = "<group>"; };
 		E1087159209C7E0900F9B105 /* PRESENTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRESENTVC.m; sourceTree = "<group>"; };
 		E108715C209FECC500F9B105 /* XYTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTempViewController.m; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BD433FAF986EA92774EA777 /* libPods-OCProjectKit.a in Frameworks */,
+				06F1EF7A3BF27F22A228616A /* Pods_OCProjectKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,8 +247,8 @@
 		BC6CD1BC6F3A1E45DAA4DD65 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7B485599042EE5735126C508 /* Pods-OCProjectKit.debug.xcconfig */,
-				05D5EC828D618318296EE058 /* Pods-OCProjectKit.release.xcconfig */,
+				181CE0997F74C16061419CBD /* Pods-OCProjectKit.debug.xcconfig */,
+				A938C205096D5793F5E4E0DC /* Pods-OCProjectKit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -622,7 +622,7 @@
 		E869198FACE58A1C97BF424B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D75CE89074D42B2C24A57DC /* libPods-OCProjectKit.a */,
+				A82F1BF6141D0AD784F4BCF3 /* Pods_OCProjectKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -634,11 +634,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E15DFABF1FEA70F100FBF3A8 /* Build configuration list for PBXNativeTarget "OCProjectKit" */;
 			buildPhases = (
-				D655F64B5026792357A7CFDF /* [CP] Check Pods Manifest.lock */,
+				278B47ACC252C066DCA949AB /* [CP] Check Pods Manifest.lock */,
 				E15DFA8F1FEA70F100FBF3A8 /* Sources */,
 				E15DFA901FEA70F100FBF3A8 /* Frameworks */,
 				E15DFA911FEA70F100FBF3A8 /* Resources */,
-				49DF64C987FA21071D65399E /* [CP] Copy Pods Resources */,
+				032C8AE7C306BFFAAE5448D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -761,29 +761,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		49DF64C987FA21071D65399E /* [CP] Copy Pods Resources */ = {
+		032C8AE7C306BFFAAE5448D8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/WebViewJavascriptBridge/WebViewJavascriptBridge/WebViewJavascriptBridge.js.txt",
+				"${SRCROOT}/Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
+				"${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge/WebViewJavascriptBridge.framework",
+				"${BUILT_PRODUCTS_DIR}/XYCategoryDemo/XYCategoryDemo.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WebViewJavascriptBridge.js.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebViewJavascriptBridge.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XYCategoryDemo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCProjectKit/Pods-OCProjectKit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D655F64B5026792357A7CFDF /* [CP] Check Pods Manifest.lock */ = {
+		278B47ACC252C066DCA949AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1012,7 +1042,7 @@
 		};
 		E15DFAC01FEA70F100FBF3A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B485599042EE5735126C508 /* Pods-OCProjectKit.debug.xcconfig */;
+			baseConfigurationReference = 181CE0997F74C16061419CBD /* Pods-OCProjectKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1034,7 +1064,7 @@
 		};
 		E15DFAC11FEA70F100FBF3A8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05D5EC828D618318296EE058 /* Pods-OCProjectKit.release.xcconfig */;
+			baseConfigurationReference = A938C205096D5793F5E4E0DC /* Pods-OCProjectKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

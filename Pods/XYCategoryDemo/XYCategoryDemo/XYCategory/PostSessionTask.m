@@ -22,24 +22,24 @@
 
 - (void)sendMessageWithUrl:(NSString *)urlString parameters:(NSString *)string_post {
     NSLog(@"传的参数：%@", string_post);
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:(NSURLRequestUseProtocolCachePolicy) timeoutInterval:10.0];
-//    [request setHTTPMethod:@"POST"];
-//    // 设置请求头
-//    [request setAllHTTPHeaderFields:nil];
-//    request.HTTPBody = [string_post dataUsingEncoding:NSUTF8StringEncoding];
-//
-////    NSData *bodyData = [NSJSONSerialization dataWithJSONObject:dic_post options:(NSJSONWritingPrettyPrinted) error:nil];
-////    NSData *bodyData = [bodyStr dataUsingEncoding:(NSUTF8StringEncoding)];
-////    [request setHTTPBody:bodyData];
-//
-//
-//    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//
-//        NSLog(@"%@\n", [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
-//    }];
-//    [dataTask resume];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:(NSURLRequestUseProtocolCachePolicy) timeoutInterval:10.0];
+    [request setHTTPMethod:@"POST"];
+    // 设置请求头
+    [request setAllHTTPHeaderFields:nil];
+    request.HTTPBody = [string_post dataUsingEncoding:NSUTF8StringEncoding];
+    
+//    NSData *bodyData = [NSJSONSerialization dataWithJSONObject:dic_post options:(NSJSONWritingPrettyPrinted) error:nil];
+//    NSData *bodyData = [bodyStr dataUsingEncoding:(NSUTF8StringEncoding)];
+//    [request setHTTPBody:bodyData];
+    
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSLog(@"%@\n", [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]);
+    }];
+    [dataTask resume];
 }
 
 + (NSString *)getIphoneType {

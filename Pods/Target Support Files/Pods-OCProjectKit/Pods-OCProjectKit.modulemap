@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-module Pods_OCProjectKit [system] {
-=======
-module Pods_OCProjectKit {
->>>>>>> 873d9aea8977afb824fdfde713ae1a9d387e62e9
+framework module Pods_OCProjectKit {
   umbrella header "Pods-OCProjectKit-umbrella.h"
 
   export *
