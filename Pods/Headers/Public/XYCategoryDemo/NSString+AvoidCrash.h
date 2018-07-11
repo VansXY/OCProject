@@ -1,1 +1,0 @@
-../../../XYCategoryDemo/XYCategoryDemo/XYCategory/NSString+AvoidCrash.h
