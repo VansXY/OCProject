@@ -36,7 +36,7 @@
 @property (nonatomic, strong) XYConnectConfig *config;
 @property (nonatomic, strong) UICKeyChainStore *keychain;
 @property (nonatomic, strong) TempView *tempView;
-
+@property (nonatomic, strong) UIButton *testButton;
 @property (nonatomic, strong) UIImageView *imageView;
 
 
@@ -92,6 +92,19 @@
         [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(addTimerMethod) userInfo:nil repeats:YES];
 //        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     });
+    
+#pragma mark - RAC button
+    UIButton *testButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    testButton.frame = CGRectMake(100, 200, 175, 50);
+    [testButton setTitle:@"点我" forState:(UIControlStateNormal)];
+    [testButton setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:testButton];
+    self.testButton = testButton;
+    [[self.testButton rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSLog(@"你点我了");
+    }];
+    
+    
     
 //    TempView *tempView = [[TempView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
 //    _tempView = tempView;

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) UIImageView *animatedImageView;
 @property (nonatomic, strong) UILabel *testLabel;
+@property (nonatomic, strong) UIButton *testButton;
 @property (nonatomic, copy) NSString *pngAddress;
 @property (nonatomic, copy) NSString *jpgAddress;
 @property (nonatomic, copy) NSString *gifAddress;
@@ -73,6 +74,16 @@
     
 //    [_imageView yy_setImageWithURL:[NSURL URLWithString:_gifAddress] options:(YYWebImageOptionProgressive)];
 //    [self closeGCD];
+    
+    UIButton *testButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    testButton.frame = CGRectMake(100, 200, 175, 50);
+    [testButton setTitle:@"点我" forState:(UIControlStateNormal)];
+    [testButton setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:testButton];
+    self.testButton = testButton;
+    [[self.testButton rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSLog(@"你点我了");
+    }];
     
 }
 
